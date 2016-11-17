@@ -23,8 +23,27 @@
         android:padding="10dp"
         android:layout_marginLeft="10dp"
         android:id="@+id/button"
-
         android:background="@color/colorPrimary"
         android:layout_toRightOf="@+id/search_tap"/>
+
+    <Button
+        android:text="위치변경"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/search_tap"
+        android:layout_below="@+id/search_tap"
+        android:layout_marginTop="20dp"
+        android:id="@+id/setLocation" />
+
+    <TextView
+        android:text="아직 설정되지 않았습니다."
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/location"
+        android:layout_alignTop="@+id/setLocation"
+        android:layout_toRightOf="@+id/setLocation"
+        android:layout_toEndOf="@+id/setLocation"
+        android:gravity="center"/>
+
 
 </RelativeLayout>
