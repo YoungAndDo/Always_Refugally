@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         btn_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i2 = new Intent(MainActivity.this, MapActivity.class);
+                startActivity(i2);
             }
         });
     }
