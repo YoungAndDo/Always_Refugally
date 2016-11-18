@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         String[] product_array = getResources().getStringArray(R.array.product_name);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, product_array);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, product_array);
         textView.setAdapter(adapter);
 
         btn_search.setOnClickListener(new View.OnClickListener() {

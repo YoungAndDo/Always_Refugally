@@ -7,4 +7,63 @@
     android:padding="10dp"
     tools:context="com.example.always_refugally.ListActivity">
 
+    <RelativeLayout
+        android:id="@+id/productInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/samdasu"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삼다수(2L 묶음)"
+            android:textSize="30sp"
+            android:layout_alignParentTop="@+id/productImage"
+            android:layout_toRightOf="@+id/productImage" />
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="국내생수/원수원:암반대수층지하수/수원지:제주시 조천읍"
+            android:layout_toRightOf="@+id/productImage"
+            android:layout_below="@+id/productName"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="즐겨찾는 상품추가"
+            android:layout_below="@+id/detail"
+            android:layout_toRightOf="@+id/productImage"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장바구니 담기"
+            android:layout_below="@+id/detail"
+            android:layout_toRightOf="@+id/star"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/productInfo">
+
+    </android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

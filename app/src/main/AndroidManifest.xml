@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".ListActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/AppTheme"></activity>
         <activity android:name=".MapActivity"></activity>
     </application>
 

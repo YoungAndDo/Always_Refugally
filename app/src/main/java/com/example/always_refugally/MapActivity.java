@@ -1,14 +1,9 @@
 package com.example.always_refugally;
 
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
-import net.daum.mf.map.api.CameraUpdateFactory;
-import net.daum.mf.map.api.MapPoint;
-import net.daum.mf.map.api.MapPointBounds;
-import net.daum.mf.map.api.MapPolyline;
 import net.daum.mf.map.api.MapView;
 
 public class MapActivity extends AppCompatActivity {
