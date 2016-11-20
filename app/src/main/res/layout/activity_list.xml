@@ -49,6 +49,7 @@
             android:layout_toRightOf="@+id/productImage"/>
 
         <Button
+            android:id="@+id/cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="장바구니 담기"
@@ -61,7 +62,7 @@
         android:id="@+id/RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:paddingBottom="10dp"
         android:layout_below="@+id/productInfo">
 
     </android.support.v7.widget.RecyclerView>

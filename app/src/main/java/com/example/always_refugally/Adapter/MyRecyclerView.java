@@ -39,11 +39,11 @@ public class MyRecyclerView extends RecyclerView.Adapter<MyRecyclerView.CustomVi
     @Override
     public void onBindViewHolder(MyRecyclerView.CustomViewHolder holder, int i) {
         Store item = store.get(i);
-        holder.logo.setBackgroundResource(R.drawable.logo_gs25);
-        holder.name.setText("test"+i);
-        holder.address.setText("test"+i);
-        holder.distance.setText("test"+i);
-        holder.price.setText("test"+i);
+        holder.logo.setBackgroundResource(item.getLogo());
+        holder.name.setText(item.getName());
+        holder.address.setText("주소: "+item.getAddress());
+        holder.distance.setText(item.getDistance());
+        holder.price.setText(item.getPrice()+"원");
     }
 
     @Override

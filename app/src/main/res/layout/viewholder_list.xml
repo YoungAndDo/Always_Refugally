@@ -1,57 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp"
-    android:layout_marginBottom="10dp"
-    android:background="@color/white">
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
 
-    <ImageView
-        android:id="@+id/logoIV"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:background="@drawable/logo_gs25"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginRight="10dp"/>
-
-    <TextView
-        android:id="@+id/nameTV"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GS25 수원성대점"
-        android:textSize="20sp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/logoIV"
-        android:layout_marginTop="5dp"
-        android:gravity="left"
-        />
+        android:padding="10dp">
 
-    <TextView
-        android:id="@+id/addressTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="경기도 수원시 장안구 서부로2126번길 9 성대프라자"
-        android:layout_toRightOf="@+id/logoIV"
-        android:layout_below="@+id/nameTV"
-        android:layout_marginTop="5dp"/>
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@drawable/logo_gs25"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"/>
 
-    <TextView
-        android:id="@+id/priceTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1000원"
-        android:textSize="28sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GS25 수원성대점"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/logoIV"
+            android:layout_marginTop="5dp"
+            android:gravity="left"
+            />
 
-    <TextView
-        android:id="@+id/disanceTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="100m"
-        android:textSize="15sp"
-        android:layout_below="@+id/priceTV"
-        android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/addressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="경기도 수원시 장안구 서부로2126번길 9 성대프라자"
+            android:layout_toRightOf="@+id/logoIV"
+            android:layout_below="@+id/nameTV"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/priceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000원"
+            android:textSize="28sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/disanceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100m"
+            android:textSize="15sp"
+            android:layout_below="@+id/priceTV"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
 </RelativeLayout>

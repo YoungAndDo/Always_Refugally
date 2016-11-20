@@ -25,4 +25,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support:recyclerview-v7:+'
+    compile 'com.naver.maps.open:naver-map-api:2.1.2@aar'
 }

@@ -13,8 +13,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String urlPath ="http://http://yd1993.dothome.co.kr/";
-
     @Bind(R.id.search_tap)
     AutoCompleteTextView textView;
 
@@ -39,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, ListActivity.class);
+
+                i.putExtra("name", textView.getText().toString());
                 startActivity(i);
             }
         });
