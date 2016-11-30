@@ -1,4 +1,4 @@
-package com.example.sarks.myapplication;
+﻿package com.example.sarks.myapplication;
 
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         List<List<Pair<String,String>>> result = komoran.analyze("안녕하세요? 좋은 아침입니다.");
         for (List<Pair<String, String>> eojeolResult : result) {
             for (Pair<String, String> wordMorph : eojeolResult) {
-                System.out.println(wordMorph);
             }
             System.out.println();
         }
