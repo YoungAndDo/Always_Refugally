@@ -3,13 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.always_refugally.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_toolbar"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </android.support.v7.widget.Toolbar>
 
     <AutoCompleteTextView
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:padding="10dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:id="@+id/search_tap"
         android:hint="제품명"
@@ -21,9 +33,11 @@
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:padding="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/button"
         android:background="@color/colorPrimary"
+        android:layout_below="@+id/my_toolbar"
         android:layout_toRightOf="@+id/search_tap"/>
 
     <Button

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.always_refugally.SignupActivity">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:background="@drawable/our_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+    <EditText
+        android:id="@+id/input_id"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_border"
+        android:hint="ID"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/app_logo"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_border"
+        android:hint="NAME"
+        android:layout_below="@+id/input_id"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/input_pw"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_border"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:layout_below="@+id/input_name"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/sign_up_btn"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:text="SIGN UP"
+        android:layout_below="@+id/input_pw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+</RelativeLayout>
