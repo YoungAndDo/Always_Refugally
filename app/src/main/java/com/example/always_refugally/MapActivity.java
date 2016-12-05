@@ -1,5 +1,6 @@
 package com.example.always_refugally;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -46,8 +47,10 @@ public class MapActivity extends FragmentActivity
             public void onClick(View view) {
                 mReverseGeoCoder = new MapReverseGeoCoder("1581af30c6260a7eba804e18e5319ddb", mapView.getMapCenterPoint(), MapActivity.this, MapActivity.this);
                 mReverseGeoCoder.startFindingAddress();
-                mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOff);
-                mapView.setShowCurrentLocationMarker(false);
+                mapView.setCurrentLocationRadius(500); // meter
+                mapView.setCurrentLocationRadiusFillColor(Color.argb(77, 255, 255, 0));
+                mapView.setCurrentLocationRadiusStrokeColor(Color.argb(77, 255, 165, 0));
+                mapView.setZoomLevel(3, true);
             }
         });
     }
