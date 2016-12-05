@@ -11,30 +11,37 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/menu"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true">
+            android:id="@+id/menu">
 
             <Button
                 android:text="내 위치 찾기"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button2" />
+                android:id="@+id/button2"
+                android:layout_weight="1" />
 
-        </RelativeLayout>
+            <Button
+                android:text="주소 저장"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:layout_weight="1" />
+        </LinearLayout>
 
         <TextView android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:background="#770000ff"
             android:textColor="#fff"
             android:padding="3dp"
             android:gravity="center"
             android:text="소공 개객기"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:id="@+id/texttext" />
 
         <RelativeLayout
             android:id="@+id/map_view"
