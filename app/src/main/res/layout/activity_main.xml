@@ -76,11 +76,11 @@
         >
 
         <AutoCompleteTextView
-            android:layout_width="240dp"
+            android:layout_width="250dp"
             android:layout_height="50dp"
             android:padding="10dp"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginLeft="5dp"
             android:id="@+id/search_tap"
             android:hint="제품명"
             android:background="@drawable/xml_border"

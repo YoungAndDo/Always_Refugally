@@ -19,7 +19,7 @@ public class MapActivity extends FragmentActivity
 
 //다음이 제공하는 MapView객체 생성 및 API Key 설정
         MapView mapView = new MapView(this);
-        mapView.setDaumMapApiKey("3421531a21e8f746b567e2db18b87271");
+        mapView.setDaumMapApiKey("1581af30c6260a7eba804e18e5319ddb");
 
 
 
