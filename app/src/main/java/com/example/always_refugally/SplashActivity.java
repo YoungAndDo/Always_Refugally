@@ -3,6 +3,7 @@ package com.example.always_refugally;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,7 +23,8 @@ public class SplashActivity extends AppCompatActivity {
         noti = new Notification.Builder(this)
                 .setContentTitle(getResources().getString(R.string.app_name))
                 .setContentText("아메리카노가 할인중입니다")
-                .setSmallIcon(R.drawable.our_logo)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
+                .setSmallIcon(R.drawable.app_icon)
                 .build();
 
         mHandler = new Handler();

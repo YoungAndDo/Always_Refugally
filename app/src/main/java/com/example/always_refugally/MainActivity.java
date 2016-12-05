@@ -7,9 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.zxing.client.android.integration.IntentIntegrator;
 import com.google.zxing.client.android.integration.IntentResult;
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Toolbar myToolbar;
 
     @Bind(R.id.search_tap)
-    AutoCompleteTextView textView;
+    EditText editText;
 
     @Bind(R.id.button)
     Button btn_search;
@@ -39,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.button_barcode)
     Button barcode;
 
+    Intent i;
     SpeechRecognizer mRecognizer;
     ArrayList<String> mResult;
 
@@ -49,17 +49,13 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(myToolbar);
-        String[] product_array = getResources().getStringArray(R.array.product_name);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, product_array);
-        textView.setAdapter(adapter);
 
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, ListActivity.class);
+                i = new Intent(MainActivity.this, ListActivity.class);
 
-                i.putExtra("name", textView.getText().toString());
+                i.putExtra("name", editText.getText().toString());
                 startActivity(i);
             }
         });
@@ -67,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         btn_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, MapActivity.class);
+                i = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(i);
             }
         });
@@ -75,14 +71,14 @@ public class MainActivity extends AppCompatActivity {
         voice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                i = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
                 i.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, getPackageName());
                 i.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ko-KR");
                 i.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true);
                 i.putExtra(RecognizerIntent.EXTRA_PROMPT, "상품명을 말하세요.");
 
                 startActivityForResult(i, 1000);
-                textView.setText("음성인식중");
+                editText.setText("음성인식중");
             }
         });
 
@@ -98,15 +94,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == 1000) { // 음성 인식 결과
             String key = RecognizerIntent.EXTRA_RESULTS;
+            if(data == null)
+            {
+                return;
+            }
             mResult = data.getStringArrayListExtra(key);
             String[] result = new String[mResult.size()];
             mResult.toArray(result);
-            textView.setText("" + result[0]);
+            editText.setText("" + result[0]);
         }
         else // 바코드 인식 결과
         {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-            textView.setText(result.getContents() + " [" + result.getFormatName() + "]");
+            editText.setText(result.getContents() + " [" + result.getFormatName() + "]");
 
         }
     }
