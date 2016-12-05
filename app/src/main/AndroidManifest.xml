@@ -39,8 +39,6 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity"/>
 
-        <activity android:name=".NMap.NMapViewer" />
-
         <activity
             android:name="com.google.zxing.client.android.CaptureActivity"
             android:screenOrientation="landscape"
