@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 
-import com.example.always_refugally.NMap.NMapViewer;
 import com.google.zxing.client.android.integration.IntentIntegrator;
 import com.google.zxing.client.android.integration.IntentResult;
 
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         btn_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, NMapViewer.class);
+                Intent i = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(i);
             }
         });
