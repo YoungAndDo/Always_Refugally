@@ -1,30 +1,49 @@
 package com.example.always_refugally;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.nhn.android.maps.NMapActivity;
 import com.nhn.android.maps.NMapController;
+import com.nhn.android.maps.NMapLocationManager;
+import com.nhn.android.maps.NMapOverlayItem;
 import com.nhn.android.maps.NMapView;
 import com.nhn.android.maps.maplib.NGeoPoint;
 import com.nhn.android.maps.nmapmodel.NMapError;
+import com.nhn.android.maps.overlay.NMapPOIitem;
+import com.nhn.android.mapviewer.overlay.NMapOverlayManager;
+import com.nhn.android.mapviewer.overlay.NMapResourceProvider;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 
-public class MapActivity extends NMapActivity{
+public class MapActivity extends NMapActivity {
+
+    @Bind(R.id.Nmap) NMapView mMapView;
 
     NMapController mMapController;
+    NMapLocationManager locationManager;
+    NMapResourceProvider resourceProvider;
+    NMapOverlayManager overlayManager;
+
+    NGeoPoint nowPoint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        ButterKnife.bind(this);
 
         // create map view
-        NMapView mMapView = new NMapView(this);
+        //NMapView mMapView = new NMapView(this);
 
         // set Client ID for Open MapViewer Library
         mMapView.setClientId("HvmSxlpSliTIvNY6T4Mn");
@@ -45,9 +64,124 @@ public class MapActivity extends NMapActivity{
         // use built in zoom controls
         mMapView.setBuiltInZoomControls(true, null);
 
+        locationManager = new NMapLocationManager(this);
+
+        resourceProvider = new NMapResourceProvider(this) {
+            @Override
+            protected int findResourceIdForMarker(int i, boolean b) {
+                return 0;
+            }
+
+            @Override
+            protected Drawable getDrawableForMarker(int i, boolean b, NMapOverlayItem nMapOverlayItem) {
+                return null;
+            }
+
+            @Override
+            public Drawable getCalloutBackground(NMapOverlayItem nMapOverlayItem) {
+                return null;
+            }
+
+            @Override
+            public String getCalloutRightButtonText(NMapOverlayItem nMapOverlayItem) {
+                return null;
+            }
+
+            @Override
+            public Drawable[] getCalloutRightButton(NMapOverlayItem nMapOverlayItem) {
+                return new Drawable[0];
+            }
+
+            @Override
+            public Drawable[] getCalloutRightAccessory(NMapOverlayItem nMapOverlayItem) {
+                return new Drawable[0];
+            }
+
+            @Override
+            public int[] getCalloutTextColors(NMapOverlayItem nMapOverlayItem) {
+                return new int[0];
+            }
+
+            @Override
+            public Drawable[] getLocationDot() {
+                return new Drawable[0];
+            }
+
+            @Override
+            public Drawable getDirectionArrow() {
+                return null;
+            }
+
+            @Override
+            public int getParentLayoutIdForOverlappedListView() {
+                return 0;
+            }
+
+            @Override
+            public int getOverlappedListViewId() {
+                return 0;
+            }
+
+            @Override
+            public int getLayoutIdForOverlappedListView() {
+                return 0;
+            }
+
+            @Override
+            public void setOverlappedListViewLayout(ListView listView, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public int getListItemLayoutIdForOverlappedListView() {
+                return 0;
+            }
+
+            @Override
+            public int getListItemTextViewId() {
+                return 0;
+            }
+
+            @Override
+            public int getListItemTailTextViewId() {
+                return 0;
+            }
+
+            @Override
+            public int getListItemImageViewId() {
+                return 0;
+            }
+
+            @Override
+            public int getListItemDividerId() {
+                return 0;
+            }
+
+            @Override
+            public void setOverlappedItemResource(NMapPOIitem nMapPOIitem, ImageView imageView) {
+
+            }
+        };
     }
 
 
+    NMapLocationManager.OnLocationChangeListener locationChangeListener = new NMapLocationManager.OnLocationChangeListener() {
+        @Override
+        public boolean onLocationChanged(NMapLocationManager nMapLocationManager, NGeoPoint nGeoPoint) {
+            nowPoint = nGeoPoint;
+            return false;
+        }
+
+        @Override
+        public void onLocationUpdateTimeout(NMapLocationManager nMapLocationManager) {
+
+        }
+
+        @Override
+        public void onLocationUnavailableArea(NMapLocationManager nMapLocationManager, NGeoPoint nGeoPoint) {
+
+        }
+    };
 
     private NMapView.OnMapStateChangeListener onMapViewStateChangeListener
             = new NMapView.OnMapStateChangeListener() {

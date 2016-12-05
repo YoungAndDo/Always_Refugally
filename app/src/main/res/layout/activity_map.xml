@@ -6,7 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.always_refugally.MapActivity">
+    <com.nhn.android.maps.NMapView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/Nmap">
 
+    </com.nhn.android.maps.NMapView>
     <RelativeLayout
         android:id="@+id/map_view"
         android:layout_width="match_parent"

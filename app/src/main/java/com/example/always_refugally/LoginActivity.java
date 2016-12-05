@@ -42,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent i = new Intent(LoginActivity.this, MainActivity.class);
                         i.putExtra("name", user.getName());
                         startActivity(i);
+                        finish();
                     }else{
                         Toast.makeText(LoginActivity.this, "Sign In Failure", Toast.LENGTH_LONG).show();
                     }
