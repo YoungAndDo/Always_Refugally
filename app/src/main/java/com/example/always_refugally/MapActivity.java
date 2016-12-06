@@ -2,6 +2,7 @@ package com.example.always_refugally;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -18,18 +19,19 @@ import net.daum.mf.map.api.MapView;
 import static com.example.always_refugally.R.id.button2;
 import static com.example.always_refugally.R.id.button3;
 import static com.example.always_refugally.R.id.button4;
+import static com.example.always_refugally.R.id.button6;
 import static com.example.always_refugally.R.id.texttext;
 
 
 public class MapActivity extends FragmentActivity
         implements MapView.OpenAPIKeyAuthenticationResultListener, MapView.MapViewEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     private MapReverseGeoCoder mReverseGeoCoder = null;
-    private static final MapPoint DEFAULT_MARKER_POINT1 = MapPoint.mapPointWithGeoCoord(37.29814, 126.972169);
-    private static final MapPoint DEFAULT_MARKER_POINT2 = MapPoint.mapPointWithGeoCoord(37.29722, 126.971374);
-    private static final MapPoint DEFAULT_MARKER_POINT3 = MapPoint.mapPointWithGeoCoord(37.2988528, 126.9727401);
-    private static final MapPoint DEFAULT_MARKER_POINT4 = MapPoint.mapPointWithGeoCoord(37.2966112, 126.9699802);
-    private static final MapPoint DEFAULT_MARKER_POINT5 = MapPoint.mapPointWithGeoCoord(37.2980882, 126.9709222);
-    private static final MapPoint DEFAULT_MARKER_POINT6 = MapPoint.mapPointWithGeoCoord(37.2994298, 126.9711171);
+    public static final MapPoint DEFAULT_MARKER_POINT1 = MapPoint.mapPointWithGeoCoord(37.29814, 126.972169);
+    public static final MapPoint DEFAULT_MARKER_POINT2 = MapPoint.mapPointWithGeoCoord(37.2988528, 126.9727401);
+    public static final MapPoint DEFAULT_MARKER_POINT3 = MapPoint.mapPointWithGeoCoord(37.29722, 126.971374);
+    public static final MapPoint DEFAULT_MARKER_POINT4 = MapPoint.mapPointWithGeoCoord(37.2966112, 126.9699802);
+    public static final MapPoint DEFAULT_MARKER_POINT5 = MapPoint.mapPointWithGeoCoord(37.2980882, 126.9709222);
+    public static final MapPoint DEFAULT_MARKER_POINT6 = MapPoint.mapPointWithGeoCoord(37.2994298, 126.9711171);
     private static final MapPoint DEFAULT_MARKER_POINT7 = MapPoint.mapPointWithGeoCoord(37.2974830, 126.9740030);
     private static final MapPoint DEFAULT_MARKER_POINT8 = MapPoint.mapPointWithGeoCoord(37.2967683, 126.9685671);
     private static final MapPoint DEFAULT_MARKER_POINT9 = MapPoint.mapPointWithGeoCoord(37.2965161, 126.9677528);
@@ -41,6 +43,14 @@ public class MapActivity extends FragmentActivity
     private static final MapPoint DEFAULT_MARKER_POINT15 = MapPoint.mapPointWithGeoCoord(37.2970740,126.9820950);
     private static final MapPoint DEFAULT_MARKER_POINT16 = MapPoint.mapPointWithGeoCoord(37.2990720,126.9800170);
     private static final MapPoint DEFAULT_MARKER_POINT17 = MapPoint.mapPointWithGeoCoord(37.3000620,126.9793800);
+    private static final MapPoint DEFAULT_MARKER_POINT18 = MapPoint.mapPointWithGeoCoord(37.2911120,126.9810980);
+    private static final MapPoint DEFAULT_MARKER_POINT19 = MapPoint.mapPointWithGeoCoord(37.2901280,126.9775870);
+    private static final MapPoint DEFAULT_MARKER_POINT20 = MapPoint.mapPointWithGeoCoord(37.2896500,126.9775670);
+    private static final MapPoint DEFAULT_MARKER_POINT21 = MapPoint.mapPointWithGeoCoord(37.2989660,126.9677020);
+    private static final MapPoint DEFAULT_MARKER_POINT22 = MapPoint.mapPointWithGeoCoord(37.2946830,126.9854790);
+    private static final MapPoint DEFAULT_MARKER_POINT23 = MapPoint.mapPointWithGeoCoord(37.3028390,126.9726860);
+    private static final MapPoint DEFAULT_MARKER_POINT24 = MapPoint.mapPointWithGeoCoord(37.2983670,126.9720650);
+    public static MapPoint CurrPoint = MapPoint.mapPointWithGeoCoord(0,0);
 
     private MapPOIItem mDefaultMarker;
     @Override
@@ -58,6 +68,7 @@ public class MapActivity extends FragmentActivity
         Button btn = (Button) findViewById(button2);
         Button btn2 = (Button) findViewById(button3);
         Button btn3 = (Button) findViewById(button4);
+        Button btn4 = (Button) findViewById(button6);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,10 +80,31 @@ public class MapActivity extends FragmentActivity
             public void onClick(View view) {
                 mReverseGeoCoder = new MapReverseGeoCoder("1581af30c6260a7eba804e18e5319ddb", mapView.getMapCenterPoint(), MapActivity.this, MapActivity.this);
                 mReverseGeoCoder.startFindingAddress();
+                CurrPoint=mapView.getMapCenterPoint();
                 mapView.setCurrentLocationRadius(700); // meter
                 mapView.setCurrentLocationRadiusFillColor(Color.argb(77, 255, 255, 0));
                 mapView.setCurrentLocationRadiusStrokeColor(Color.argb(77, 255, 165, 0));
                 mapView.setZoomLevel(3, true);
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MapPoint CMP = CurrPoint;
+                StringBuffer result =new StringBuffer("daummaps://route?sp=");
+                result.append(CMP.getMapPointGeoCoord().latitude);
+                result.append(",");
+                result.append(CMP.getMapPointGeoCoord().longitude);
+                result.append("&ep=");
+                result.append(DEFAULT_MARKER_POINT1.getMapPointGeoCoord().latitude);
+                result.append(",");
+                result.append(DEFAULT_MARKER_POINT1.getMapPointGeoCoord().longitude);
+                result.append("&by=FOOT");
+                Uri uri = Uri.parse(result.toString());
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setData(uri);
+                startActivity(intent);
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +127,15 @@ public class MapActivity extends FragmentActivity
                 createDefaultMarker15(mapView);
                 createDefaultMarker16(mapView);
                 createDefaultMarker17(mapView);
+                createDefaultMarker19(mapView);
+                createDefaultMarker20(mapView);
+                createDefaultMarker21(mapView);
+                createDefaultMarker23(mapView);
+                createDefaultMarker24(mapView);
+                String s;
+                s=Integer.toString(distanceBetween(DEFAULT_MARKER_POINT1));
+                Toast.makeText(MapActivity.this, s, Toast.LENGTH_SHORT).show();
+
             }
         });
     }
@@ -203,7 +244,7 @@ public class MapActivity extends FragmentActivity
 
     private void createDefaultMarker2(MapView mapView) {
         mDefaultMarker = new MapPOIItem();
-        String name = "CU 수원성균관점";
+        String name = "세븐일레븐 수원성대점";
         mDefaultMarker.setItemName(name);
         mDefaultMarker.setTag(2);
         mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT2);
@@ -215,7 +256,7 @@ public class MapActivity extends FragmentActivity
 
     private void createDefaultMarker3(MapView mapView) {
         mDefaultMarker = new MapPOIItem();
-        String name = "세븐일레븐 수원성대점";
+        String name = "CU 수원성균관점";
         mDefaultMarker.setItemName(name);
         mDefaultMarker.setTag(3);
         mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT3);
@@ -391,5 +432,97 @@ public class MapActivity extends FragmentActivity
         mDefaultMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
 
         mapView.addPOIItem(mDefaultMarker);
+    }
+
+    private void createDefaultMarker18(MapView mapView) {
+        mDefaultMarker = new MapPOIItem();
+        String name = "세븐일레븐 수원천천대우점";
+        mDefaultMarker.setItemName(name);
+        mDefaultMarker.setTag(18);
+        mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT18);
+        mDefaultMarker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        mDefaultMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+
+        mapView.addPOIItem(mDefaultMarker);
+    }
+
+    private void createDefaultMarker19(MapView mapView) {
+        mDefaultMarker = new MapPOIItem();
+        String name = "세븐일레븐 천천원룸점";
+        mDefaultMarker.setItemName(name);
+        mDefaultMarker.setTag(19);
+        mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT19);
+        mDefaultMarker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        mDefaultMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+
+        mapView.addPOIItem(mDefaultMarker);
+    }
+
+    private void createDefaultMarker20(MapView mapView) {
+        mDefaultMarker = new MapPOIItem();
+        String name = "GS25 천천원룸점";
+        mDefaultMarker.setItemName(name);
+        mDefaultMarker.setTag(20);
+        mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT20);
+        mDefaultMarker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        mDefaultMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+
+        mapView.addPOIItem(mDefaultMarker);
+    }
+
+    private void createDefaultMarker21(MapView mapView) {
+        mDefaultMarker = new MapPOIItem();
+        String name = "미니스톱 율전스카이점";
+        mDefaultMarker.setItemName(name);
+        mDefaultMarker.setTag(21);
+        mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT21);
+        mDefaultMarker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        mDefaultMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+
+        mapView.addPOIItem(mDefaultMarker);
+    }
+
+    private void createDefaultMarker22(MapView mapView) {
+        mDefaultMarker = new MapPOIItem();
+        String name = "위드미 수원한화점";
+        mDefaultMarker.setItemName(name);
+        mDefaultMarker.setTag(22);
+        mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT22);
+        mDefaultMarker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        mDefaultMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+
+        mapView.addPOIItem(mDefaultMarker);
+    }
+
+    private void createDefaultMarker23(MapView mapView) {
+        mDefaultMarker = new MapPOIItem();
+        String name = "위드미 수원율전점";
+        mDefaultMarker.setItemName(name);
+        mDefaultMarker.setTag(23);
+        mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT23);
+        mDefaultMarker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        mDefaultMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+
+        mapView.addPOIItem(mDefaultMarker);
+    }
+
+    private void createDefaultMarker24(MapView mapView) {
+        mDefaultMarker = new MapPOIItem();
+        String name = "365PLUS 수원성대점";
+        mDefaultMarker.setItemName(name);
+        mDefaultMarker.setTag(24);
+        mDefaultMarker.setMapPoint(DEFAULT_MARKER_POINT24);
+        mDefaultMarker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        mDefaultMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+
+        mapView.addPOIItem(mDefaultMarker);
+    }
+
+    public int distanceBetween(MapPoint MP) {
+        MapPoint CMP = CurrPoint;
+        double y = (CMP.getMapPointGeoCoord().latitude - MP.getMapPointGeoCoord().latitude) * 110988.09668599277;
+        double x = (CMP.getMapPointGeoCoord().longitude - MP.getMapPointGeoCoord().longitude) * 88359.11356077534;
+
+        return (int)Math.sqrt(y * y + x * x);
     }
 }
