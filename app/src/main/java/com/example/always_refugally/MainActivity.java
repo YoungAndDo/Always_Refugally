@@ -141,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                putitem();
 //                i = new Intent(MainActivity.this, ListActivity.class);
 //
 //                i.putExtra("name", editText.getText().toString());
@@ -300,6 +301,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
     void putitem()
     {
