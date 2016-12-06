@@ -25,6 +25,8 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support:recyclerview-v7:24.1.1'
     compile 'com.android.support:design:24.1.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/core.jar')
     compile files('libs/libDaumMapAndroid.jar')

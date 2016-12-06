@@ -13,10 +13,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.google.zxing.client.android.integration.IntentIntegrator;
 import com.google.zxing.client.android.integration.IntentResult;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,8 +27,8 @@ import java.util.Map;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity
+{
     @Bind(R.id.my_toolbar)
     Toolbar myToolbar;
 
@@ -39,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
     TextView location;
 
     @Bind(R.id.button)
+    Button btn_add;
+
+    @Bind(R.id.search)
     Button btn_search;
 
     @Bind(R.id.setLocation)
@@ -109,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     Intent i;
     SpeechRecognizer mRecognizer;
     ArrayList<String> mResult;
-    Map<String,Integer> item;
+    HashMap<String,Integer> item;
     int count;
 
     @Override
@@ -124,8 +130,6 @@ public class MainActivity extends AppCompatActivity {
         item = new HashMap<String,Integer>();
         count = 0;
 
-
-
         setSupportActionBar(myToolbar);
 
         i = getIntent();
@@ -138,14 +142,20 @@ public class MainActivity extends AppCompatActivity {
             name.setText(user_name);
         }
 
-        btn_search.setOnClickListener(new View.OnClickListener() {
+        btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 putitem();
-//                i = new Intent(MainActivity.this, ListActivity.class);
-//
-//                i.putExtra("name", editText.getText().toString());
-//                startActivity(i);
+
+            }
+        });
+
+        btn_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i = new Intent(MainActivity.this, DBActivity.class);
+                i.putExtra("item", item);
+                startActivity(i);
             }
         });
 

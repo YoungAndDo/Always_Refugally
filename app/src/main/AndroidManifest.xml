@@ -37,6 +37,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".DBActivity" />
         <activity android:name=".ResultActivity"></activity>
         <activity
             android:name="com.google.zxing.client.android.CaptureActivity"

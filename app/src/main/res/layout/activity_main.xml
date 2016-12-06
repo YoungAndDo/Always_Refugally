@@ -91,40 +91,56 @@
         android:id="@+id/relativeLayout">
 
         <EditText
-            android:layout_width="230dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:padding="10dp"
             android:layout_marginLeft="5dp"
             android:id="@+id/search_tap"
             android:hint="제품명"
-            android:background="@drawable/xml_border"/>
+            android:background="@drawable/xml_border"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/button" />
+
         <Button
-            android:text="검색"
+            android:text="상품추가"
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:padding="10dp"
             android:layout_marginLeft="10dp"
             android:id="@+id/button"
             android:background="@color/colorPrimary"
-            android:layout_toRightOf="@+id/search_tap"/>
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp" />
 
         <Button
             android:text="음성인식 검색"
-            android:layout_width="160dp"
             android:layout_height="50dp"
+            android:id="@+id/button_voice"
+            android:layout_width="120dp"
             android:layout_below="@+id/search_tap"
-            android:layout_marginTop="10dp"
-            android:id="@+id/button_voice" />
+            android:layout_alignStart="@+id/search_tap" />
 
         <Button
             android:text="바코드인식 검색"
-            android:layout_width="160dp"
             android:layout_height="50dp"
             android:id="@+id/button_barcode"
+            android:layout_width="120dp"
             android:layout_below="@+id/search_tap"
-            android:layout_toRightOf="@+id/button_voice"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
+            android:layout_toEndOf="@+id/button_voice" />
+
+        <Button
+            android:text="검색"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/search"
+            android:background="@color/colorPrimary"
+            android:layout_alignBaseline="@+id/button_barcode"
+            android:layout_alignBottom="@+id/button_barcode"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp" />
     </RelativeLayout>
 
     <RelativeLayout
