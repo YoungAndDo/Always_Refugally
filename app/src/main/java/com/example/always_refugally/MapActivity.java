@@ -1,5 +1,6 @@
 package com.example.always_refugally;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -140,5 +141,8 @@ public class MapActivity extends FragmentActivity
         TextView localtext = (TextView) findViewById(texttext);
         Toast.makeText(MapActivity.this, "현재 위치 : " + result, Toast.LENGTH_SHORT).show();
         localtext.setText(result);
+        Intent i = new Intent(MapActivity.this, MainActivity.class);
+        i.putExtra("my_address", result);
+        startActivity(i);
     }
 }

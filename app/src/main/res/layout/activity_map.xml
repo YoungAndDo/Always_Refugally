@@ -38,7 +38,7 @@
             android:textColor="#fff"
             android:padding="3dp"
             android:gravity="center"
-            android:text="소공 개객기"
+            android:text="내 위치 찾기 버튼을 눌러주세요"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:id="@+id/texttext" />

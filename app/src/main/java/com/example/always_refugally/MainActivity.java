@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.zxing.client.android.integration.IntentIntegrator;
 import com.google.zxing.client.android.integration.IntentResult;
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.search_tap)
     EditText editText;
+
+    @Bind(R.id.user_name)
+    TextView name;
+
+    @Bind(R.id.location)
+    TextView location;
 
     @Bind(R.id.button)
     Button btn_search;
@@ -49,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(myToolbar);
+
+        i = getIntent();
+        String my_addr = i.getExtras().getString("my_address");
+        String user_name = i.getExtras().getString("name");
+        if(my_addr != null){
+            location.setText(my_addr);
+        }
+        if(user_name != null){
+            name.setText(user_name);
+        }
 
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
