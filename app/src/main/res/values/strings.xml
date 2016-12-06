@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">알뜰살뜰</string>
+    <!--<string-array name="product_name">-->
+    <!--<item>가그린 레귤러</item>-->
+    <!--<item>매일우유 오리지널(ESL)(1000ml)</item>-->
+    <!--<item>오비골든라거(단품)</item>-->
+    <!--<item>국화빵 수(묶음)</item>-->
+    <!--<item>참붕어 싸만코(묶음)</item>-->
+    <!--<item>센쿡찰진밥(3개입)</item>-->
+    <!--<item>마일드참치(묶음)</item>-->
+    <!--<item>사조참치마일드(묶음)</item>-->
+    <!--<item>Neut.핸드크림</item>-->
+    <!--<item>CJ 참그린</item>-->
+    <!--<item>해표 꽃소금</item>-->
+    <!--<item>도브 뷰티바</item>-->
+    <!--<item>칩포테이토 오리지날</item>-->
+    <!--<item>아이비</item>-->
+    <!--<item>JB 뉴 베드타임 로션</item>-->
+    <!--<item>목초란 10구</item>-->
+    <!--<item>잘풀리는집 보습미용티슈</item>-->
+    <!--<item>썬 부탄가스</item>-->
+    <!--<item>알프스가스</item>-->
+    <!--<item>옥시싹싹 락스로싹 세제로싹</item>-->
+    <!--<item>유한락스 후레쉬</item>-->
+    <!--<item>청정원 우리쌀 크림스프</item>-->
+    <!--<item>청정원 순창 쌈장</item>-->
+    <!--<item>게토레이 레몬</item>-->
+    <!--<item>CJ햇반 단팥죽</item>-->
+    <!--<item>스타벅스 커피라떼</item>-->
+    <!--<item>매일 카페라떼 마일드</item>-->
+    <!--<item>배니시 옥시크린 O2액션</item>-->
+    <!--<item>뼈로가는 칼슘두유 담백한맛</item>-->
+    <!--<item>생야채돼지고기물만두(400g*2봉)</item>-->
+    <!--<item>웰빙 다시다 산들애 국내산해물</item>-->
+    <!--<item>오비골든라거 6캔</item>-->
+    <!--<item>쇠고기등심(1등급)</item>-->
+    <!--<item>고소한국산콩두부(부침용)(대상)</item>-->
+    <!--<item>센쿡찰진밥(단품)</item>-->
+    <!--<item>롯데슬라이스햄</item>-->
+    <!--<item>참작 참잘만든 슬라이스햄</item>-->
+    <!--<item>프레시안삼호부산어묵</item>-->
+    <!--<item>싱싱맛살</item>-->
+    <!--<item>국산아작아작콩나물</item>-->
+    <!--<item>푸드림 하얀설탕</item>-->
+    <!--<item>워터라인</item>-->
+    <!--<item>위스퍼 리프레시 클린케어 중형날개</item>-->
+    <!--<item>비트(단품)</item>-->
+    <!--<item>델몬트 스카시플러스 100</item>-->
+    <!--<item>참이슬 클래식</item>-->
+    <!--<item>롯데호일(25cm x 30m)</item>-->
+    <!--<item>하선정 숯 김밥단무지</item>-->
+    <!--<item>돼지고기삼겹살</item>-->
+    <!--<item>쇠고기불고기(1+등급)</item>-->
+    <!--<item>쇠고기등심(1+등급)</item>-->
+    <!--<item>프레시안 샌드위치햄</item>-->
+    <!--<item>대림게맛살큰잔치</item>-->
+    <!--<item>마일드참치(단품)</item>-->
+    <!--<item>맑고신선한해표식용유</item>-->
+    <!--<item>백설국내콩기름</item>-->
+    <!--<item>백설 하얀설탕</item>-->
+    <!--<item>맥심모카골드</item>-->
+    <!--<item>펩시콜라(1.5L)</item>-->
+    <!--<item>알뜨랑비누 핑크</item>-->
+    <!--<item>남양유업 맛있는우유GT(1000ml)</item>-->
+    <!--<item>물먹는하마 참숯</item>-->
+    <!--<item>백설부침가루(1kg)</item>-->
+    <!--<item>올리브유저지방 마가린(200g)</item>-->
+    <!--<item>뽑아쓰는 크린백</item>-->
+    <!--<item>오리지널 요플레(4개묶음)</item>-->
+    <!--<item>고소한참기름(오뚜기)</item>-->
+    <!--<item>CJ햇당면</item>-->
+    <!--<item>옛날당면</item>-->
+    <!--<item>진간장 금F3</item>-->
+    <!--<item>고소한골드마요네즈(오뚜기)</item>-->
+    <!--<item>카스 프레쉬 6캔</item>-->
+    <!--<item>백설 중력밀가루(1kg)</item>-->
+    <!--<item>큐원 영양강화밀가루(1kg)</item>-->
+    <!--<item>삼양라면 5개입</item>-->
+    <!--<item>진라면(순한맛) 5개입</item>-->
+    <!--<item>옛날국수소면</item>-->
+    <!--<item>포스트 콘푸라이트(600g)</item>-->
+    <!--<item>하림 토종닭백숙(1050g)</item>-->
+    <!--<item>비타파워</item>-->
+    <!--<item>동원양반포기김치(2.2kg)</item>-->
+    <!--<item>Dr. ato(민감성건성피부보습)</item>-->
+    <!--<item>3분 쇠고기 카레</item>-->
+    <!--<item>오뚜기파운드마가린(450g)</item>-->
+    <!--<item>칸타타 원두커피 프리미엄 블렌드(275ml)</item>-->
+    <!--<item>벡셀AA*2입</item>-->
+    <!--<item>비타500(묶음)</item>-->
+    <!--<item>배추(1포기 1950~2000g)</item>-->
+    <!--<item>페브리즈 깨끗한 무향(900)</item>-->
+    <!--<item>3분 쇠고기 짜장</item>-->
+    <!--<item>아비노베이비데일리모이스춰로션</item>-->
+    <!--<item>듀라셀 AA *4입</item>-->
+    <!--<item>무(줄기 없는 무 1개 1500g)</item>-->
+    <!--<item>볶음 짜장</item>-->
+    <!--<item>오뚜기황도</item>-->
+    <!--<item>맛있는 미역국</item>-->
+    <!--<item>옥수수 마가린(200g)</item>-->
+    <!--<item>크린백</item>-->
+    <!--<item>백설 미역국</item>-->
+    <!--<item>퓨어가닉허브로션</item>-->
+    <!--<item>뉴트로지나릴렉싱바디워시</item>-->
+    <!--<item>맥심 티오피 마스터블렌드(275ml)</item>-->
+    <!--<item>미쟝센 샤이닝에센스크림컬러 6C(자연밤색)</item>-->
+    <!--<item>까스명수(단품)</item>-->
+    <!--<item>생록천(단품)</item>-->
+    <!--<item>후레쉬랩(25cm x 50m)(3M)</item>-->
+    <!--<item>쿠킹호일(20cm x 30m)(삼아)</item>-->
+    <!--<item>매일유업 뼈로가는 칼슘치즈(270g)</item>-->
+    <!--<item>맑고신선한옥수수유</item>-->
+    <!--<item>쿠킹호일(25cm x 30m)(삼아)</item>-->
+    <!--<item>센쿡찰진밥(6개입)</item>-->
+    <!--<item>동서현미녹차 100포</item>-->
+    <!--<item>국순당 우국생</item>-->
+    <!--<item>서울장수생막걸리</item>-->
+    <!--<item>무균무때(욕실용)</item>-->
+    <!--<item>홈스타 제습과 방충을 한번에</item>-->
+    <!--<item>옥시싹싹(욕실용)</item>-->
+    <!--<item>물먹는하마 슬림</item>-->
+    <!--<item>해피바스 내추럴24핸드크림</item>-->
+    <!--<item>행복한콩 국산콩두부(찌개용)</item>-->
+    <!--<item>곰표 다목적밀가루(1kg)</item>-->
+    <!--<item>해피바스 로즈에센스 로맨틱 바디워시</item>-->
+    <!--<item>엘라스틴 맥시마이징 볼륨 샴푸</item>-->
+    <!--<item>팬틴 바운시 볼륨케어 샴푸</item>-->
+    <!--<item>타우스액 10병</item>-->
+    <!--<item>해찬들 사계절 쌈장</item>-->
+    <!--<item>iope 슈퍼바이탈 세럼</item>-->
+    <!--<item>팬틴 바운시 볼륨케어 컨디셔닝 린스</item>-->
+    <!--<item>달콤한 베지밀 비</item>-->
+    <!--<item>디럭스키친타올</item>-->
+    <!--<item>참이슬 후레쉬</item>-->
+    <!--<item>국산콩두부(찌개용)풀무원 350g)</item>-->
+    <!--<item>샘표소면(1kg)</item>-->
+    <!--<item>제일제면소 소면(900g)</item>-->
+    <!--<item>맛있는 옛날 꿀호떡</item>-->
+    <!--<item>한입가득 밤형만쥬</item>-->
+    <!--<item>그대로 토스트</item>-->
+    <!--<item>켈로그 콘푸로스트(600g)</item>-->
+    <!--<item>오뚜기 3분 백세카레 약간 매운맛</item>-->
+    <!--<item>오뚜기 맛있는밥</item>-->
+    <!--<item>사누끼 가쓰오 생우동</item>-->
+    <!--<item>목초를 먹고 자란 건강한 닭이 낳은 특란</item>-->
+    <!--<item>두번 구워 김밥이 더욱 향긋한 김밥김</item>-->
+    <!--<item>대림오양맛살</item>-->
+    <!--<item>7even허니(4개 묶음)</item>-->
+    <!--<item>목우촌 주부9단 프랑크 소시지(500g)</item>-->
+    <!--<item>치즈명장 드빈치 체다슬라이스 치즈(200g)</item>-->
+    <!--<item>치즈명장 드빈치 체다슬라이스 치즈(300g)</item>-->
+    <!--<item>햇살담은 자연숙성진간장</item>-->
+    <!--<item>동원복숭아(황도) 슬라이스</item>-->
+    <!--<item>샘표 시골집 토장(900g)</item>-->
+    <!--<item>복음자리 딸기잼</item>-->
+    <!--<item>동서벌꿀</item>-->
+    <!--<item>동서 아카시아꿀</item>-->
+    <!--<item>백설 자일로스 설탕</item>-->
+    <!--<item>CJ 행복한콩 국산콩 콩나물</item>-->
+    <!--<item>CJ하선정 포기김치(2.5Kg)</item>-->
+    <!--<item>오리온 펌프껌 후라보노</item>-->
+    <!--<item>롯데 자일리톨 오리지날(87g)</item>-->
+    <!--<item>바밤바(단품)</item>-->
+    <!--<item>몽쉘 크림</item>-->
+    <!--<item>가나마일드초콜렛 2개입</item>-->
+    <!--<item>남양 17차 티백(80입)</item>-->
+    <!--<item>달콤한 삼육두유 B</item>-->
+    <!--<item>국순당 대박 왕 막걸리</item>-->
+    <!--<item>컨피던스</item>-->
+    <!--<item>삼다수(2L 묶음)</item>-->
+    <!--<item>삼다수(500ml)</item>-->
+    <!--<item>삼다수(500ml 묶음)</item>-->
+    <!--<item>아이시스(500ml)</item>-->
+    <!--<item>네스카페 신선한 모카(180입)</item>-->
+    <!--<item>엔제리너스 카페모카</item>-->
+    <!--<item>크리넥스데코앤소프트(산뜻한부케향)</item>-->
+    <!--<item>그린핑거 촉촉한자연보습 베이비로션</item>-->
+    <!--<item>화이트 NEW시크릿홀 울트라 날개 중형</item>-->
+    <!--<item>데톨 오리지날 허브</item>-->
+    <!--<item>PACE 6 면도날</item>-->
+    <!--<item>마하3 면도날</item>-->
+    <!--<item>도브 데미지 볼륨 부스트 샴푸</item>-->
+    <!--<item>하기스 프리미어 플러스 남아용 대형(60매 4단계)</item>-->
+    <!--<item>어드밴스 캐비티(블루)120g</item>-->
+    <!--<item>어드밴스 캐비티(블루) 120g*3입</item>-->
+    <!--<item>페리오 클링스 아이스민트 120GX3</item>-->
+    <!--<item>페리오 캐비티케어(묶음)</item>-->
+    <!--<item>마미손 뷰티(중)</item>-->
+    <!--<item>유한락스 레귤러</item>-->
+    <!--<item>쿠킹호일(25cm x 30m)(대한)</item>-->
+    <!--<item>오뚜기 크림스프</item>-->
+    <!--<item>동원 양반 국산100% 쇠고기죽</item>-->
+    <!--<item>오뚜기 야채죽</item>-->
+    <!--<item>하림 자연실록백숙 830g</item>-->
+    <!--<item>악마의유혹 프렌치 카페오레</item>-->
+    <!--<item>떠먹는불가리스 딸기 오리지날(4개묶음)</item>-->
+    <!--<item>포카칩 오리지날</item>-->
+    <!--<item>부라보콘(단품) 화이트바닐라</item>-->
+    <!--<item>삼성구론산D 10병</item>-->
+    <!--<item>월드콘XQ(단품)</item>-->
+    <!--<item>올에이 중형 고무장갑</item>-->
+    <!--<item>니베아 SOS 핸드 밤</item>-->
+    <!--<item>엘라스틴 맥시마이징 볼륨 컨디셔너</item>-->
+    <!--<item>더블리치 간편염색 (4G 자연갈색)</item>-->
+    <!--<item>iope 슈퍼바이탈 소프너</item>-->
+    <!--<item>I cant believe(60%) 저지방마가린(212.5g*2개)</item>-->
+    <!--<item>서울우유 흰우유(1000ml)</item>-->
+    <!--<item>서울우유 체다슬라이스치즈(200g)</item>-->
+    <!--<item>부라보콘 5개입 화이트바닐라</item>-->
+    <!--<item>참붕어 싸만코(단품)</item>-->
+    <!--<item>처음처럼</item>-->
+    <!--<item>샘표황도</item>-->
+    <!--<item>해찬들 우리쌀태양초골드</item>-->
+    <!--<item>국화빵 수(단품)</item>-->
+    <!--<item>iope 슈퍼바이탈 에멀젼</item>-->
+    <!--<item>프렌치까페믹스</item>-->
+    <!--<item>참크래커</item>-->
+    <!--<item>롯데목캔디 허브</item>-->
+    <!--<item>가나마일드초콜렛(단품)</item>-->
+    <!--<item>개성 감자만두</item>-->
+    <!--<item>생물만두(700g)</item>-->
+    <!--<item>오리지널 단팥빵</item>-->
+    <!--<item>옥수수 보노콘스프</item>-->
+    <!--<item>햇반(엄마가해주신밥 6+2개입)</item>-->
+    <!--<item>청정원 우리쌀 야채죽</item>-->
+    <!--<item>생야채 유부초밥(380g)</item>-->
+    <!--<item>대림선어묵 부산어묵</item>-->
+    <!--<item>매일바이오거트(4개 묶음360g)</item>-->
+    <!--<item>임페리얼분유XO 1단계(800g)</item>-->
+    <!--<item>식빵위의 네모</item>-->
+    <!--<item>참진한 참기름(해표)</item>-->
+    <!--<item>청정원 진한 토마토 케찹</item>-->
+    <!--<item>찬마루 김밥 단무지</item>-->
+    <!--<item>새우깡</item>-->
+    <!--<item>미닛메이드 오리지날 오렌지 100</item>-->
+    <!--<item>카스 프레쉬(단품 500ml)</item>-->
+    <!--<item>삼다수(2L)</item>-->
+    <!--<item>비락식혜(1.8L)</item>-->
+    <!--<item>파워에이드 마운틴블라스트(520ml)</item>-->
+    <!--<item>포카리스웨트(620ml)</item>-->
+    <!--<item>크리넥스 디럭스(갤러리) 250매X3개입</item>-->
+    <!--<item>깨끗한나라 물티슈</item>-->
+    <!--<item>좋은느낌 스키니핏 하이퍼 울트라 날개 중형</item>-->
+    <!--<item>아이!깨끗해 항균폼 상큼레몬향</item>-->
+    <!--<item>도브 데미지 볼륨 부스트 린스</item>-->
+    <!--<item>미장센 펄샤이닝모이스쳐 린스</item>-->
+    <!--<item>미장센 펄샤이닝모이스쳐 샴푸</item>-->
+    <!--<item>에너자이저AA*2입</item>-->
+    <!--<item>크린랩_고무장갑(중) (묶음)</item>-->
+    <!--<item>피죤 용기 옐로미모사(3.1L일반/드럼겸용)</item>-->
+    <!--<item>샤프란 케어(은은한향)</item>-->
+    <!--<item>스파크 드럼 2.5KG리필</item>-->
+    <!--<item>물먹는 하마 옷장용</item>-->
+    <!--<item>크린지퍼백</item>-->
+    <!--<item>항균트리오</item>-->
+    <!--<item>옥시크린 스프레이</item>-->
+    <!--<item>비비안 고탄력 팬티스타킹</item>-->
+    <!--<item>박카스F 10병</item>-->
+    <!--<item>박카스F(단품)</item>-->
+    <!--<item>알프스디 10병</item>-->
+    <!--<item>갈치 생물 1마리(60cm내외 250~400g)</item>-->
+    <!--<item>참조기 국내산 10마리(20~25cm 내외)</item>-->
+    <!--<item>삼치 국내산 1마리(60~70cm 500~700g)</item>-->
+    <!--<item>고등어 생물 1마리(25~30cm 300~500g)</item>-->
+    <!--<item>오징어 국내산 생물 2마리(25cm내외 400~600g)</item>-->
+    <!--<item>시금치 국내산 1단(250~400g)</item>-->
+    <!--<item>당근(국내산 씻지 않은 흙당근)</item>-->
+    <!--<item>감자(국내산 껍질 있는 감자)</item>-->
+    <!--<item>고구마(국내산 껍질 있는 밤고구마)</item>-->
+    <!--<item>국내산 양송이버섯</item>-->
+    <!--<item>오이국내산 백다다기 3개(약 25cm 450~750g)</item>-->
+    <!--<item>풋고추(국내산)</item>-->
+    <!--<item>국내산 애호박 1개(250~350g)</item>-->
+    <!--<item>국내산 흑대파 1단(500~800g)</item>-->
+    <!--<item>맛있는오뚜기밥(6개입)</item>-->
+    <!--<item>코카콜라(1.8L)</item>-->
+    <!--<item>쇠고기불고기(1등급)</item>-->
+    <!--<item>오뚜기부침가루(1kg)</item>-->
+    <!--<item>오뚜기식용유(콩100%)</item>-->
+    <!--<item>맛선생 해물</item>-->
+    <!--<item>고소한마요네즈(대상)</item>-->
+    <!--<item>동원참치 라이트스탠다드(단품)</item>-->
+    <!--<item>해표 순창 궁 발아콩 12가지 양념쌈장</item>-->
+    <!--<item>순창 오리지널 우리쌀 찰고추장</item>-->
+    <!--<item>오뚜기카레 순한맛</item>-->
+    <!--<item>뉴트로지나 Ultra Sheer Dry-Touch Sun Block</item>-->
+    <!--<item>니베아 Face Sun Block Moisturizing Cream</item>-->
+    <!--<item>페이스선블럭 화이트닝</item>-->
+    <!--<item>니베아 Fresh Sun Lotion</item>-->
+    <!--<item>미쟝센 쉽고빠른거품염색(3N 흑갈색)</item>-->
+    <!--<item>신라면 5개입</item>-->
+    <!--<item>프레시안 주부초밥왕(320g)</item>-->
+    <!--<item>드봉 스위트로즈</item>-->
+    <!--<item>동원참치 라이트스탠다드(묶음)</item>-->
+    <!--<item>닥터 아토마일드(묶음)</item>-->
+    <!--<item>종가집 풍부한 포기김치(1.9kg)</item>-->
+    <!--<item>해태아이스쿨</item>-->
+    <!--<item>메로나(묶음)</item>-->
+    <!--<item>월드콘XQ 5개입</item>-->
+    <!--<item>위청수(단품)</item>-->
+    <!--<item>파워크린</item>-->
+    <!--<item>듀라셀 울트라 파워체크 AA*2입(피엔지)</item>-->
+    <!--<item>페브리즈 깨끗한 무향(370)</item>-->
+    <!--<item>롯데호일(30cm x 30m)</item>-->
+    <!--<item>크린랩(22cm x 50m)</item>-->
+    <!--<item>마니커 국내산 토종닭 1050g 팩</item>-->
+    <!--<item>이오 20s (3개묶음)</item>-->
+    <!--<item>퍼실 액체세제 일반용 2.7L</item>-->
+    <!--<item>모닝버터(해바라기유)(200g)</item>-->
+    <!--<item>앱솔루트 명작 1단계(800g)</item>-->
+    <!--<item>프리미엄 산양분유 1단계(800g)</item>-->
+    <!--<item>도브 뷰티 너리싱 바디워시</item>-->
+    <!--<item>도브 센스티브스킨 바디워시</item>-->
+    <!--<item>돼지바(단품)</item>-->
+    <!--<item>돼지바(묶음)</item>-->
+    <!--<item>리스테린 쿨민트</item>-->
+    <!--<item>새콤달콤 간편한 유부초밥 박사(160g*2)</item>-->
+    <!--<item>HITE(6캔)</item>-->
+    <!--<item>비너스 올풀림방지 팬티 스타킹</item>-->
+    <!--<item>세이프 유기농 발아현미 리필</item>-->
+    <!--<item>자연퐁 솔잎향 세균설거지(용기)</item>-->
+    <!--<item>지퍼락 지퍼백(중)</item>-->
+    <!--<item>3M후레쉬백</item>-->
+    <!--<item>테크(단품)</item>-->
+    <!--<item>샤프란 코튼 앤 크림</item>-->
+    <!--<item>쉐리 후레쉬 시트 카밍라벤더</item>-->
+    <!--<item>맥스 CRV 폭발방지 부탄가스</item>-->
+    <!--<item>NEW하기스 네이처메이드 남아용 대형(42매 4단계)</item>-->
+    <!--<item>리엔 흑모비책크림염색 자연갈색</item>-->
+    <!--<item>해피바스 항균 레몬그라스 핸드워시</item>-->
+    <!--<item>풀무원 생 가쓰오 우동</item>-->
+    <!--<item>바디피트 볼록맞춤울트라중형</item>-->
+    <!--<item>햇바삭김 김밥김</item>-->
+    <!--<item>양반 구운 김밥김</item>-->
+    <!--<item>자연의 시작 불가리스 사과 (4개묶음)</item>-->
+    <!--<item>무가염버터(450g)</item>-->
+    <!--<item>퍼실 액체세제 드럼용 2.7L</item>-->
+    <!--<item>롯데비앤나(400g)</item>-->
+    <!--<item>의성 마늘 프랑크(350g)</item>-->
+    <!--<item>CJ 더 건강한햄 그릴후랑크(350g)</item>-->
+    <!--<item>제이디 100수런닝</item>-->
+    <!--<item>제이디 100수 반팔러닝</item>-->
+    <!--<item>TRY 후레쉬남티셔츠*3매</item>-->
+    <!--<item>TRY 후레쉬남러닝*3매</item>-->
+    <!--<item>BYC 데오니아 남러닝</item>-->
+    <!--<item>대한웰빙호일 15m*25m</item>-->
+    <!--<item>비트 O2 살균표백제</item>-->
+    <!--<item>깨끗한나라 키친타올</item>-->
+    <!--<item>백설 국내산 사과식초</item>-->
+    <!--<item>바밤바(묶음)</item>-->
+    <!--<item>맥스웰 하우스 오리지날</item>-->
+    <!--<item>레쓰비 마일드(175ml)</item>-->
+    <!--<item>맥스웰 하우스 오리지날(175ml)</item>-->
+    <!--<item>아이시스(2L)</item>-->
+    <!--<item>스프라이트</item>-->
+    <!--<item>세이 온더바디 고보습 아이리스</item>-->
+    <!--<item>HITE(단품)</item>-->
+    <!--<item>깨끗한나라 순수 3겹데코</item>-->
+    <!--<item>홈스타 곰팡이 싹</item>-->
+    <!--<item>물먹는하마 신발용</item>-->
+    <!--<item>크린랩(30cm x 50m)</item>-->
+    <!--<item>다우니 고농축 블루튤립과 달콤한 라일락</item>-->
+    <!--<item>듀라셀 울트라 파워체크 AAA*2입</item>-->
+    <!--<item>(단종)송염치약(묶음)</item>-->
+    <!--<item>(단종)메디안 후레쉬마린(묶음)</item>-->
+    <!--<item>하이드로5 면도날</item>-->
+    <!--<item>비겐크림폼(짙은 갈색)</item>-->
+    <!--<item>찰토스트식빵</item>-->
+    <!--<item>스페셜K 오리지널(480g)</item>-->
+    <!--<item>해피바스 허브 라벤더 아로마 바</item>-->
+    <!--<item>알짜란(15구)</item>-->
+    <!--<item>진한참기름(CJ)</item>-->
+    <!--<item>칠성사이다</item>-->
+    <!--<item>매일유업 뼈로가는 칼슘치즈(180g)</item>-->
+    <!--<item>양파(껍질 있는 망포장 1망당 1500g)</item>-->
+    <!--<item>주부초밥짱(480g)</item>-->
+    <!--<item>초코파이 18개입</item>-->
+    <!--<item>생야채돼지고기물만두(650g+200g)</item>-->
+    <!--<item>순창재래식안심생된장</item>-->
+    <!--<item>딸기잼</item>-->
+    <!--<item>CJ 가쓰오 우동 4인용</item>-->
+    <!--<item>백설꽃소금</item>-->
+    <!--<item>토마토케찹(오뚜기)</item>-->
+    <!--<item>오뚜기 사과식초</item>-->
+    <!--<item>햇반(엄마가해주신밥 단품)</item>-->
+    <!--<item>동서 순보리차</item>-->
+    <!--<item>옥수수수염차</item>-->
+    <!--<item>대상 사과식초</item>-->
+    <!--<item>풀무원 새콤달콤 유부(330g)</item>-->
+    <!--<item>사조 꽁치</item>-->
+    <!--<item>동원 꽁치</item>-->
+    <!--<item>샘표 김치찌개용 꽁치</item>-->
+    <!--<item>오뚜기 꽁치</item>-->
+    <!--<item>영진구론산G 10병</item>-->
+    <!--<item>서울우유 체다슬라이스치즈(400g)</item>-->
+    <!--<item>메로나(단품)</item>-->
+    <!--<item>가나파이 오리지날 12개입</item>-->
+    <!--<item>해찬들 재래식 된장</item>-->
+    <!--<item>아비노 컨티뉴어스 프로텍션 선블럭</item>-->
+    <!--<item>1964 정통 크림빵</item>-->
+    <!--<item>행복한콩 유기농두부 부침용(300g)</item>-->
+    <!--<item>마늘(국내산 깐마늘 중품)</item>-->
+    <!--<item>고구마(국내산 껍질 있는 호박고구마)</item>-->
+    <!--<item>국내산 느타리버섯</item>-->
+    <!--<item>갈치 냉동 1마리(60cm내외 250~400g)</item>-->
+    <!--<item>참조기 부세 1마리(20~25cm내외 200~400g)</item>-->
+    <!--<item>오징어 국내산 냉동 2마리(25cm 내외 500~700g)</item>-->
+    <!--<item>시금치 국내산 100g</item>-->
+    <!--<item>오이국내산 백다다기 1개(약 25cm 150~250g)</item>-->
+    <!--</string-array>-->
+    <string name="title_activity_test">TestActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="str_done">완료</string>
+</resources>
