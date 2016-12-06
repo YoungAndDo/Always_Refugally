@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.1.0_6e8985317e1f3b5ed580c50eaf4a1dc12eb0b705\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_8dc1bccf1df25ab1a6a2ce7fd7e150189490019c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="399040335e5b7d31eab4fc6b601338a081d5d9c5">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b7ee641535b7caf31637926f74c5e241a203f58a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_72947a59e55e372931e4f0983ba029b77fd7ec02\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.8.0_d6ff578c37e0868f17ea5f43fc41299fae1650d1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_49f4730034d8bd87ddeca59c9a679c8b877ee718\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="a885081a27f3b2fa2e9859a1639faaf21b57a8ac">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_c5ffa6e6e404d04a36efb087d0f583175f3e96bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_98cceacc487b0ad6bda8c094440f7c2b8bc35469\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_fed2a4c394a69b1091c8f26446b2b2650e0102d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_f848c3a4352b5d50499ca41e5d8d059054d07b36\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_d3a97fbbab3b081fbedc960f112cea5d36158249\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_61a598dbfd78aa643c71f515a222f38d9e73c128\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_9cbf1fb1cfcb938c3623329d02de88eb892f7ed7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\libs\libDaumMapAndroid.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b365841bba8bc2d592e4b22008885a6f0cd1c77d">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\2\libDaumMapAndroid_45777e6211d380875f20f7cc664d82f9ae600c16\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_fa3753ef4dd83f8bd6230cc6b62eb5acfef83fd0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_8d4ea4bcb00a3e0f2ec021182f1df4dc604135b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_eb321827b93d3ec40872d1e768001079e852880e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\design\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e195bd694d5389acfba27ff4fdfa64c4c65b2c05">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.1.1_22a748082c536304d089e3438f13b82822d9cc0b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_a7931e8baa1cdbc7ece0dd3b3c22909f2bd5cbad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\libs\core.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="51ed0b0e26301288ac6fd894ed0248fcf6e98546">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\2\core_116678293a2a3edf9eba0b8f5e602b97cbb073b9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_0b4e7b7d9231ac7fe2ec0dd083f1380dee2c1e65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.3.0_d340ce835b87f06b64b6e4756d94faf4ed609bc0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_9f4526760464b99845e4b5220db1967bd66b7b39\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.1.0_9c7923a080d2b7efa74f50e56ea189ae874d2e67\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="787871951412550519b0222aba3c9df4cea49875">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.1.1_c88827b0cb966b9f4229aba01e2672f28c06470b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_7f7d3c918ec06b14cf786e0e6abce5692762755d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SarkS\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\SarkS\Desktop\Always_Refugally-master\Always_Refugally\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-7.0.1_ee543ac31858857945d1981f99d75f15726c3237\classes.dex" />
+    </item>
+
+</items>
