@@ -23,8 +23,7 @@
         android:layout_below="@+id/app_logo"
         android:layout_marginTop="20dp"
         android:padding="10dp"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_centerHorizontal="true" />
     <EditText
         android:id="@+id/pw"
         android:layout_width="250dp"
