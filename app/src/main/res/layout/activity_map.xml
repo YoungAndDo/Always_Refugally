@@ -30,6 +30,13 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/button3"
                 android:layout_weight="1" />
+
+            <Button
+                android:text="주변검색"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <TextView android:layout_width="match_parent"
