@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra(RecognizerIntent.EXTRA_PROMPT, "상품명을 말하세요.");
 
                 startActivityForResult(i, 1000);
-                editText.setText("음성인식중");
             }
         });
 
@@ -123,8 +122,13 @@ public class MainActivity extends AppCompatActivity {
         else // 바코드 인식 결과
         {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-            editText.setText(result.getContents() + " [" + result.getFormatName() + "]");
 
+            String barcode = result.getContents();
+            if(barcode.equals("10000")) {
+                editText.setText("빼빼로");
+            }else if(barcode.equals("20000")){
+                editText.setText("콜라");
+            }
         }
     }
 
