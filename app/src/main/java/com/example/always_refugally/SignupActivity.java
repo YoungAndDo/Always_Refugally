@@ -38,6 +38,7 @@ public class SignupActivity extends AppCompatActivity {
                     user.setUser_id(input_id.getText().toString());
                     user.setName(input_name.getText().toString());
                     user.setPw(input_pw.getText().toString());
+                    user.setAddr("");
                     userDB = new UserDBDAO(SignupActivity.this);
                     userDB.insert(user);
                     Toast.makeText(SignupActivity.this, "Sign Up Success", Toast.LENGTH_LONG).show();

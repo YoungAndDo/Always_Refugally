@@ -15,7 +15,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.example.always_refugally.DB.Product;
+import com.example.always_refugally.DB.User;
+import com.example.always_refugally.DBDAO.ProductDBDAO;
+import com.example.always_refugally.DBDAO.UserDBDAO;
 import com.google.zxing.client.android.integration.IntentIntegrator;
 import com.google.zxing.client.android.integration.IntentResult;
 
@@ -117,6 +123,11 @@ public class MainActivity extends AppCompatActivity
     ArrayList<String> mResult;
     HashMap<String,Integer> item;
     int count;
+    static String user_id;
+    String my_addr;
+
+    UserDBDAO userDB;
+    ProductDBDAO productDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,20 +144,13 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(myToolbar);
 
         i = getIntent();
-        String my_addr = i.getExtras().getString("my_address");
-        String user_name = i.getExtras().getString("name");
-        if(my_addr != null){
-            location.setText(my_addr);
-        }
-        if(user_name != null){
-            name.setText(user_name);
-        }
+
+        setUserInfo();
 
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 putitem();
-
             }
         });
 
@@ -217,14 +221,21 @@ public class MainActivity extends AppCompatActivity
                     if(count == 3)
                     {
                         list3.setVisibility(View.GONE);
+                        tmp = returnProductURLByName(list2_name.getText().toString());
+                        Glide.with(MainActivity.this).load(tmp).into(list1_pic);
                         list1_name.setText(list2_name.getText().toString());
                         list1_count.setText(list2_count.getText().toString());
+
+                        tmp = returnProductURLByName(list3_name.getText().toString());
+                        Glide.with(MainActivity.this).load(tmp).into(list2_pic);
                         list2_name.setText(list3_name.getText().toString());
                         list2_count.setText(list3_count.getText().toString());
                     }
                     else if(count == 2)
                     {
                         list2.setVisibility(View.GONE);
+                        tmp = returnProductURLByName(list2_name.getText().toString());
+                        Glide.with(MainActivity.this).load(tmp).into(list1_pic);
                         list1_name.setText(list2_name.getText().toString());
                         list1_count.setText(list2_count.getText().toString());
                     }
@@ -266,6 +277,8 @@ public class MainActivity extends AppCompatActivity
                     if(count == 3)
                     {
                         list3.setVisibility(View.GONE);
+                        tmp = returnProductURLByName(list3_name.getText().toString());
+                        Glide.with(MainActivity.this).load(tmp).into(list2_pic);
                         list2_name.setText(list3_name.getText().toString());
                         list2_count.setText(list3_count.getText().toString());
                     }
@@ -312,14 +325,63 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    private void setUserInfo() {
+        if(i.getExtras().getString("user_id") != null){
+            user_id = i.getExtras().getString("user_id");
+        }
+
+        userDB = new UserDBDAO(MainActivity.this);
+        User cur_user = userDB.selectById(user_id);
+
+        if(i.getExtras().getString("my_address") != null){
+            my_addr = i.getExtras().getString("my_address");
+            cur_user.setAddr(my_addr);
+            userDB.update(cur_user, user_id);
+        }
+
+        name.setText(cur_user.getName() + " 님");
+
+        if(!cur_user.getAddr().equals("")){
+            location.setText(cur_user.getAddr());
+        }
+    }
+
+    String returnProductURLByName(String product_name)
+    {
+        productDB = new ProductDBDAO(MainActivity.this);
+        Product product = productDB.selectById(product_name);
+        if(product == null){
+            return null;
+        }else{
+            return product.getImg_url();
+        }
+    }
+
 
     void putitem()
     {
         String name = editText.getText().toString();
+        String imgURL = returnProductURLByName(name);
+        //editText.setText("");
+        if(imgURL == null){
+            Toast.makeText(MainActivity.this, "No Existence on Our Database", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        switch (count){
+            case 2:
+                if(list3_name.getText().equals(name)) return;
+            case 1:
+                if(list2_name.getText().equals(name)) return;
+            case 0:
+                if(list1_name.getText().equals(name)) return;
+        }
+
         item.put(name, 1);
         if(count == 0)
         {
             list1.setVisibility(View.VISIBLE);
+            Glide.with(this).load(imgURL).into(list1_pic);
             list1_name.setText(name);
             list1_count.setText("1");
             count++;
@@ -327,6 +389,7 @@ public class MainActivity extends AppCompatActivity
         else if(count == 1)
         {
             list2.setVisibility(View.VISIBLE);
+            Glide.with(this).load(imgURL).into(list2_pic);
             list2_name.setText(name);
             list2_count.setText("1");
             count++;
@@ -334,6 +397,7 @@ public class MainActivity extends AppCompatActivity
         else if(count == 2)
         {
             list3.setVisibility(View.VISIBLE);
+            Glide.with(this).load(imgURL).into(list3_pic);
             list3_name.setText(name);
             list3_count.setText("1");
             count++;

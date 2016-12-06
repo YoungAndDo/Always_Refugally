@@ -8,20 +8,14 @@ public interface DBLiteral {
     String DATABASE_NAME = "Always Refugally";
     String USER_TABLE = "user";
     String PRODUCT_TABLE = "product";
-//    String STORE_TABLE = "store";
-//    String RELATION_TABLE = "relation";
     int DATABASE_VERSION = 1;
 
     String user_id_column = "user_id";
     String product_id_column = "product_id";
-//    String store_id_column = "store_id";
     String name_column = "name";
     String pw_column = "pw";
     String imgUrl_column = "detail";
-//    String image_column = "image";
-//    String addr_columnn = "addr";
-//    String lat_column = "lat";
-//    String long_column = "long";
+    String addr_columnn = "addr";
 
     String WHERE_USER_ID_EQUALS = user_id_column + "=?";
     String WHERE_PRODUCT_ID_EQUALS = product_id_column + "=?";
@@ -29,7 +23,8 @@ public interface DBLiteral {
     String CREATE_USER_TABLE = "CREATE TABLE IF NOT EXISTS " +
             USER_TABLE + "(" + user_id_column + " TEXT PRIMARY KEY, " +
             name_column + " TEXT, " +
-            pw_column + " TEXT " +
+            pw_column + " TEXT, " +
+            addr_columnn + " TEXT " +
             ");";
 
     String CREATE_PRODUCT_TABLE = " CREATE TABLE " +

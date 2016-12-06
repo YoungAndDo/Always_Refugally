@@ -30,7 +30,7 @@ public class UserDBDAO {
         database = this.helper.getWritableDatabase();
         tableName = DBLiteral.USER_TABLE;
         columnList = new String[]{DBLiteral.user_id_column, DBLiteral.name_column,
-                DBLiteral.pw_column};
+                DBLiteral.pw_column, DBLiteral.addr_columnn};
         open();
     }
 
@@ -57,6 +57,7 @@ public class UserDBDAO {
         values.put(DBLiteral.user_id_column, data.getUser_id());
         values.put(DBLiteral.name_column, data.getName());
         values.put(DBLiteral.pw_column, data.getPw());
+        values.put(DBLiteral.addr_columnn, data.getAddr());
         return values;
     }
 
@@ -74,6 +75,7 @@ public class UserDBDAO {
         data.setUser_id(cursor.getString(0));
         data.setName(cursor.getString(1));
         data.setPw(cursor.getString(2));
+        data.setAddr(cursor.getString(3));
         return data;
     }
     public User selectById(String user_id){

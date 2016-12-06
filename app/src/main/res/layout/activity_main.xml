@@ -51,24 +51,24 @@
 
         <TextView
             android:text="홍길동"
-            android:layout_width="145dp"
+            android:layout_width="150dp"
             android:layout_height="40dp"
             android:textSize="20sp"
             android:id="@+id/user_name"
             android:layout_toRightOf="@+id/user_icon"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="10dp"
             android:gravity="center_vertical"
             android:paddingLeft="5dp"/>
 
         <TextView
-            android:text="아직 설정되지 않았습니다!"
-            android:layout_width="145dp"
+            android:text="주소를 설정해주세요"
+            android:layout_width="150dp"
             android:layout_height="35dp"
             android:id="@+id/location"
             android:layout_below="@+id/user_name"
             android:layout_toRightOf="@+id/user_icon"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="10dp"
             android:gravity="center_vertical"
             android:paddingLeft="5dp"/>
 
@@ -77,7 +77,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_toRightOf="@+id/user_name"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:id="@+id/setLocation" />
     </RelativeLayout>
 
@@ -91,15 +91,13 @@
         android:id="@+id/relativeLayout">
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="50dp"
             android:padding="10dp"
-            android:layout_marginLeft="5dp"
+            android:paddingLeft="5dp"
             android:id="@+id/search_tap"
             android:hint="제품명"
-            android:background="@drawable/xml_border"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/button" />
+            android:background="@drawable/xml_border" />
 
         <Button
             android:text="상품추가"
@@ -109,38 +107,35 @@
             android:layout_marginLeft="10dp"
             android:id="@+id/button"
             android:background="@color/colorPrimary"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="10dp" />
+            android:layout_toRightOf="@+id/search_tap"/>
 
         <Button
             android:text="음성인식 검색"
             android:layout_height="50dp"
             android:id="@+id/button_voice"
-            android:layout_width="120dp"
-            android:layout_below="@+id/search_tap"
-            android:layout_alignStart="@+id/search_tap" />
+            android:layout_width="125dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/search_tap" />
 
         <Button
             android:text="바코드인식 검색"
             android:layout_height="50dp"
             android:id="@+id/button_barcode"
-            android:layout_width="120dp"
+            android:layout_width="125dp"
             android:layout_below="@+id/search_tap"
-            android:layout_toEndOf="@+id/button_voice" />
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/button_voice"/>
 
         <Button
             android:text="검색"
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:padding="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:id="@+id/search"
             android:background="@color/colorPrimary"
-            android:layout_alignBaseline="@+id/button_barcode"
-            android:layout_alignBottom="@+id/button_barcode"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp" />
+            android:layout_below="@+id/search_tap"
+            android:layout_alignStart="@+id/button"/>
     </RelativeLayout>
 
     <RelativeLayout

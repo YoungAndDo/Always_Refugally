@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(user != null && user.getPw().equals(login_pw.getText().toString())){
                         Toast.makeText(LoginActivity.this, "Sign In Success", Toast.LENGTH_LONG).show();
                         Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                        i.putExtra("name", user.getName());
+                        i.putExtra("user_id", user.getUser_id());
                         startActivity(i);
                         finish();
                     }else{

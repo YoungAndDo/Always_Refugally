@@ -11,6 +11,15 @@ public class User implements Parcelable {
     String user_id;
     String name;
     String pw;
+    String addr;
+
+    public String getAddr() {
+        return addr;
+    }
+
+    public void setAddr(String addr) {
+        this.addr = addr;
+    }
 
     public User() {super(); }
     public User(Parcel in) {
