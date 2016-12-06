@@ -38,9 +38,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements DBLiteral {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_USER_TABLE);
-        sqLiteDatabase.execSQL(CREATE_STORE_TABLE);
         sqLiteDatabase.execSQL(CREATE_PRODUCT_TABLE);
-        sqLiteDatabase.execSQL(CREATE_RELATION_TABLE);
     }
 
     @Override
