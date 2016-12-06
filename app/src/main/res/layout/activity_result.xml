@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.always_refugally.ResultActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_toolbar"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+            <ImageView
+                android:id="@+id/logo_main"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/app_name_logo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/logo_main"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:text="장바구니 검색결과"
+                android:textSize="19sp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_border"
+            android:layout_below="@+id/my_toolbar"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/intro_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/xml_border"
+                android:padding="5dp"
+                android:text="#Best Store"/>
+
+            <TextView
+                android:id="@+id/total_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/intro_1"
+                android:text="예상 총 구매금액:  "
+                android:textSize="13sp"
+                android:layout_toLeftOf="@+id/total_price_1"
+                android:gravity="center|left"/>
+
+            <TextView
+                android:id="@+id/bar_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@+id/intro_1"/>
+
+            <TextView
+                android:id="@+id/total_price_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20,000원"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:layout_marginEnd="5dp"
+                android:layout_alignTop="@+id/intro_1"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo_gs25"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/bar_1"
+                android:id="@+id/store_logo_1" />
+
+            <TextView
+                android:id="@+id/store_name_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GS25 율전성대점"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/store_logo_1"/>
+
+            <TextView
+                android:id="@+id/store_1_item_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="babaro/2ea - 1,000W"
+                android:layout_below="@+id/bar_1"
+                android:textSize="15sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <TextView
+                android:id="@+id/store_1_item_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="babaro/2ea - 1,000W"
+                android:layout_below="@+id/store_1_item_1"
+                android:textSize="15sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <TextView
+                android:id="@+id/store_1_item_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="babaro/2ea - 1,000W"
+                android:layout_below="@+id/store_1_item_2"
+                android:textSize="15sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_border"
+            android:layout_below="@+id/layout_1"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/intro_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/xml_border"
+                android:padding="5dp"
+                android:text="#Cheapest Store"/>
+
+            <TextView
+                android:id="@+id/total_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/intro_2"
+                android:text="예상 총 구매금액:  "
+                android:textSize="13sp"
+                android:layout_toLeftOf="@+id/total_price_2"
+                android:gravity="center|left"/>
+
+            <TextView
+                android:id="@+id/bar_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@+id/intro_2"/>
+
+            <TextView
+                android:id="@+id/total_price_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20,000원"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:layout_marginEnd="5dp"
+                android:layout_alignTop="@+id/intro_2"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo_gs25"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/bar_2"
+                android:id="@+id/store_logo_2" />
+
+            <TextView
+                android:id="@+id/store_name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GS25 율전성대점"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/store_logo_2"/>
+
+            <TextView
+                android:id="@+id/store_2_item_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="babaro/2ea - 1,000W"
+                android:layout_below="@+id/bar_2"
+                android:textSize="15sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <TextView
+                android:id="@+id/store_2_item_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="babaro/2ea - 1,000W"
+                android:layout_below="@+id/store_2_item_1"
+                android:textSize="15sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <TextView
+                android:id="@+id/store_2_item_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="babaro/2ea - 1,000W"
+                android:layout_below="@+id/store_2_item_2"
+                android:textSize="15sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_border"
+        android:layout_below="@+id/layout_2"
+        android:padding="5dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/intro_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/xml_border"
+            android:padding="5dp"
+            android:text="#Cloest Store"/>
+
+        <TextView
+            android:id="@+id/total_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/intro_3"
+            android:text="예상 총 구매금액:  "
+            android:textSize="13sp"
+            android:layout_toLeftOf="@+id/total_price_3"
+            android:gravity="center|left"/>
+
+        <TextView
+            android:id="@+id/bar_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_below="@+id/intro_3"/>
+
+        <TextView
+            android:id="@+id/total_price_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20,000원"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center|left"
+            android:layout_marginEnd="5dp"
+            android:layout_alignTop="@+id/intro_3"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_gs25"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/bar_3"
+            android:id="@+id/store_logo_3" />
+
+        <TextView
+            android:id="@+id/store_name_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GS25 율전성대점"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/store_logo_3"/>
+
+        <TextView
+            android:id="@+id/store_3_item_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="babaro/2ea - 1,000W"
+            android:layout_below="@+id/bar_3"
+            android:textSize="15sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/store_3_item_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="babaro/2ea - 1,000W"
+            android:layout_below="@+id/store_3_item_1"
+            android:textSize="15sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/store_3_item_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="babaro/2ea - 1,000W"
+            android:layout_below="@+id/store_3_item_2"
+            android:textSize="15sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
