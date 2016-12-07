@@ -47,21 +47,30 @@
 
         </LinearLayout>
 
-        <TextView android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:background="#770000ff"
-            android:textColor="#fff"
-            android:padding="3dp"
-            android:gravity="center"
-            android:text="내 위치 찾기 버튼을 눌러주세요"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/texttext" />
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/map_layout">
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#770000ff"
+                android:textColor="#fff"
+                android:padding="3dp"
+                android:gravity="center"
+                android:text="내 위치 찾기 버튼을 눌러주세요"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texttext" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/abc_ic_menu_paste_mtrl_am_alpha" />
+
         </RelativeLayout>
     </LinearLayout>
 

@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,13 +37,14 @@ public class MapActivity extends FragmentActivity
     public static MapPoint DEFAULT_MARKER_POINT = MapPoint.mapPointWithGeoCoord(0, 0);
     public static MapPoint CurrPoint = MapPoint.mapPointWithGeoCoord(0,0);
     MapView mapView;
-
+    ImageButton ib;
+    Intent intent;
+    ArrayList<Store> sl;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-//다음이 제공하는 MapView객체 생성 및 API Key 설정
-        //mapView = (MapView) findViewById(R.id.map_view);
+        //다음이 제공하는 MapView객체 생성 및 API Key 설정
         MapLayout mapLayout = new MapLayout(this);
         mapView = mapLayout.getMapView();
         mapView.setDaumMapApiKey("1581af30c6260a7eba804e18e5319ddb");
@@ -55,10 +57,22 @@ public class MapActivity extends FragmentActivity
         Button btn2 = (Button) findViewById(button3);
         Button btn3 = (Button) findViewById(button4);
         Button btn4 = (Button) findViewById(button6);
+        ib = (ImageButton) findViewById(R.id.imageButton);
+        intent = getIntent();
+        sl = (ArrayList)intent.getSerializableExtra("store");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading);
+            }
+        });
+        ib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i;
+                i = new Intent(MapActivity.this, ResultActivity.class);
+                i.putExtra("store", sl);
+                startActivity(i);
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -76,8 +90,6 @@ public class MapActivity extends FragmentActivity
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = getIntent();
-                ArrayList<Store> sl = (ArrayList)intent.getSerializableExtra("store");
                 ArrayList<MapPoint> MapPo = new ArrayList<>();
                 ArrayList<MapPOIItem> MapPoI = new ArrayList<>();
                 for (int i=0;i<sl.size();i++)
