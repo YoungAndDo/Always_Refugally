@@ -3,6 +3,7 @@ package com.example.always_refugally;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -62,6 +63,10 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        best_store = new Store();
+        cheapest_store = new Store();
+        closest_store = new Store();
 
         setThreeStore();
 
@@ -176,6 +181,7 @@ public class ResultActivity extends AppCompatActivity {
         for(Store s : sl) {
             total_list.add(s.getTotal());
             dist_list.add(s.getdis());
+            Log.d("이름",s.getName());
         }
         int index = 0;
         double min = 10000000;

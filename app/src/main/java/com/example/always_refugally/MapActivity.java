@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,6 +93,7 @@ public class MapActivity extends FragmentActivity
             public void onClick(View view) {
                 ArrayList<MapPoint> MapPo = new ArrayList<>();
                 ArrayList<MapPOIItem> MapPoI = new ArrayList<>();
+                SystemClock.sleep(1000);
                 for (int i=0;i<sl.size();i++)
                 {
                     Store s = sl.get(i);
@@ -108,8 +110,7 @@ public class MapActivity extends FragmentActivity
                 }
                 String s;
                 s=Integer.toString(distanceBetween(MapPo.get(0)));
-                Toast.makeText(MapActivity.this, s, Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(MapActivity.this, s, Toast.LENGTH_SHORT).show();
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
