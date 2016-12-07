@@ -100,7 +100,7 @@ public class MapActivity extends FragmentActivity
                     MapPo.add(MapPoint.mapPointWithGeoCoord(s.getLat(),s.getLon()));
                     MapPoI.add(new MapPOIItem());
                     MapPOIItem mpmp = MapPoI.get(i);
-                    mpmp.setItemName(s.getName() + "\n" + s.getTotal());
+                    mpmp.setItemName(s.getName() + "\n" + s.getTotal() + "원");
                     mpmp.setTag(i);
                     mpmp.setMapPoint(MapPo.get(i));
                     mpmp.setMarkerType(MapPOIItem.MarkerType.BluePin);
@@ -144,7 +144,7 @@ public class MapActivity extends FragmentActivity
 
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
-        Toast.makeText(this, mapPOIItem.getItemName() + mapPOIItem, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, mapPOIItem.getItemName(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
