@@ -15,6 +15,7 @@ import com.example.always_refugally.DB.User;
 import com.example.always_refugally.DBCLASS.Store;
 import com.example.always_refugally.DBDAO.UserDBDAO;
 
+import net.daum.mf.map.api.MapLayout;
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapReverseGeoCoder;
@@ -30,23 +31,25 @@ import static com.example.always_refugally.R.id.texttext;
 
 
 public class MapActivity extends FragmentActivity
-        implements MapView.OpenAPIKeyAuthenticationResultListener, MapView.MapViewEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
+        implements MapView.OpenAPIKeyAuthenticationResultListener, MapView.MapViewEventListener, MapView.POIItemEventListener ,MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     private MapReverseGeoCoder mReverseGeoCoder = null;
-    public static final MapPoint DEFAULT_MARKER_POINT1 = MapPoint.mapPointWithGeoCoord(37.29814, 126.972169);
-
-
+    public static MapPoint DEFAULT_MARKER_POINT = MapPoint.mapPointWithGeoCoord(0, 0);
     public static MapPoint CurrPoint = MapPoint.mapPointWithGeoCoord(0,0);
+    MapView mapView;
 
-    private MapPOIItem mDefaultMarker;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 //다음이 제공하는 MapView객체 생성 및 API Key 설정
-        final MapView mapView = new MapView(this);
+        //mapView = (MapView) findViewById(R.id.map_view);
+        MapLayout mapLayout = new MapLayout(this);
+        mapView = mapLayout.getMapView();
         mapView.setDaumMapApiKey("1581af30c6260a7eba804e18e5319ddb");
-        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
-        mapViewContainer.addView(mapView);
+        mapView.setMapViewEventListener(this);
+        mapView.setPOIItemEventListener(this);
+        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_layout);
+        mapViewContainer.addView(mapLayout);
         mapView.setCurrentLocationEventListener(this);
         Button btn = (Button) findViewById(button2);
         Button btn2 = (Button) findViewById(button3);
@@ -106,9 +109,9 @@ public class MapActivity extends FragmentActivity
                 result.append(",");
                 result.append(CMP.getMapPointGeoCoord().longitude);
                 result.append("&ep=");
-                result.append(DEFAULT_MARKER_POINT1.getMapPointGeoCoord().latitude);
+                result.append(DEFAULT_MARKER_POINT.getMapPointGeoCoord().latitude);
                 result.append(",");
-                result.append(DEFAULT_MARKER_POINT1.getMapPointGeoCoord().longitude);
+                result.append(DEFAULT_MARKER_POINT.getMapPointGeoCoord().longitude);
                 result.append("&by=FOOT");
                 Uri uri = Uri.parse(result.toString());
                 Intent intent = new Intent();
@@ -117,6 +120,26 @@ public class MapActivity extends FragmentActivity
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onPOIItemSelected(MapView mapView, MapPOIItem mapPOIItem) {
+    DEFAULT_MARKER_POINT = mapPOIItem.getMapPoint();
+    }
+
+    @Override
+    public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
+        Toast.makeText(this, "Clicked " + mapPOIItem.getItemName() + " Callout Balloon", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem, MapPOIItem.CalloutBalloonButtonType calloutBalloonButtonType) {
+
+    }
+
+    @Override
+    public void onDraggablePOIItemMoved(MapView mapView, MapPOIItem mapPOIItem, MapPoint mapPoint) {
+
     }
 
     @Override
