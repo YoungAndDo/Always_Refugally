@@ -81,7 +81,7 @@ public class MapActivity extends FragmentActivity
                 mReverseGeoCoder = new MapReverseGeoCoder("1581af30c6260a7eba804e18e5319ddb", mapView.getMapCenterPoint(), MapActivity.this, MapActivity.this);
                 mReverseGeoCoder.startFindingAddress();
                 CurrPoint=mapView.getMapCenterPoint();
-                mapView.setCurrentLocationRadius(700); // meter
+                mapView.setCurrentLocationRadius(1000); // meter
                 mapView.setCurrentLocationRadiusFillColor(Color.argb(77, 255, 255, 0));
                 mapView.setCurrentLocationRadiusStrokeColor(Color.argb(77, 255, 165, 0));
                 mapView.setZoomLevel(3, true);
