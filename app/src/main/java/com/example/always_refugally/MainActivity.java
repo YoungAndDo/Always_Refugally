@@ -423,6 +423,8 @@ public class MainActivity extends AppCompatActivity
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
 
             String barcode = result.getContents();
+            if(barcode == null) return;
+            Toast.makeText(MainActivity.this, barcode, Toast.LENGTH_SHORT).show();
             if(barcode.equals("10000")) {
                 editText.setText("빼빼로");
             }else if(barcode.equals("20000")){

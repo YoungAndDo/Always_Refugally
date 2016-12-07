@@ -27,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
         manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         noti = new Notification.Builder(this)
                 .setContentTitle(getResources().getString(R.string.app_name))
-                .setContentText("아메리카노가 할인중입니다")
+                .setContentText("현재 할인 중인 상품이 있습니다.")
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
                 .setSmallIcon(R.drawable.app_icon)
                 .build();
