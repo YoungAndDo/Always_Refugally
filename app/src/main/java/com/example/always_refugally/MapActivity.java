@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -101,11 +100,14 @@ public class MapActivity extends FragmentActivity
                     MapPo.add(MapPoint.mapPointWithGeoCoord(s.getLat(),s.getLon()));
                     MapPoI.add(new MapPOIItem());
                     MapPOIItem mpmp = MapPoI.get(i);
-                    mpmp.setItemName(s.getName());
+                    mpmp.setItemName(s.getName() + "\n" + s.getTotal());
                     mpmp.setTag(i);
                     mpmp.setMapPoint(MapPo.get(i));
                     mpmp.setMarkerType(MapPOIItem.MarkerType.BluePin);
                     mpmp.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+                    mpmp.setShowAnimationType(MapPOIItem.ShowAnimationType.SpringFromGround);
+                    if(i==22)
+                        continue;
                     mapView.addPOIItem(mpmp);
                 }
                 String s;
@@ -142,7 +144,7 @@ public class MapActivity extends FragmentActivity
 
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
-        Toast.makeText(this, "Clicked " + mapPOIItem.getItemName() + " Callout Balloon", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, mapPOIItem.getItemName() + mapPOIItem, Toast.LENGTH_SHORT).show();
     }
 
     @Override
