@@ -12,17 +12,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.always_refugally.DBCLASS.Product;
+import com.example.always_refugally.DBCLASS.Store;
+
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapReverseGeoCoder;
 import net.daum.mf.map.api.MapView;
-
-import com.example.always_refugally.DBCLASS.Item;
-import com.example.always_refugally.DBCLASS.Product;
-import com.example.always_refugally.DBCLASS.SearchData;
-import com.example.always_refugally.DBCLASS.Store;
-import com.example.always_refugally.DBCLASS.StoreData;
-import com.example.always_refugally.DBCLASS.UserInterface;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,10 +71,12 @@ public class MapActivity extends FragmentActivity
 
         for (Store s : sl)
         {
+            s.setdis(distanceBetweenLoc(s.getLat(),s.getLon()));
             Log.d("맵nyan", "onResponse: " + s.getName());
             Log.d("맵nyan", "onResponse: " + s.getLat());
             Log.d("맵nyan", "onResponse: " + s.getLon());
             Log.d("맵nyan", "onResponse: " + s.getTotal());
+
             List<Product> pl = s.getProduct();
             for (Product p : pl)
             {
@@ -551,6 +549,14 @@ public class MapActivity extends FragmentActivity
         MapPoint CMP = CurrPoint;
         double y = (CMP.getMapPointGeoCoord().latitude - MP.getMapPointGeoCoord().latitude) * 110988.09668599277;
         double x = (CMP.getMapPointGeoCoord().longitude - MP.getMapPointGeoCoord().longitude) * 88359.11356077534;
+
+        return (int)Math.sqrt(y * y + x * x);
+    }
+
+    public int distanceBetweenLoc(double lat, double lon) {
+        MapPoint CMP = CurrPoint;
+        double y = (CMP.getMapPointGeoCoord().latitude - lat) * 110988.09668599277;
+        double x = (CMP.getMapPointGeoCoord().longitude - lon) * 88359.11356077534;
 
         return (int)Math.sqrt(y * y + x * x);
     }
