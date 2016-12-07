@@ -140,7 +140,7 @@ public class ResultActivity extends AppCompatActivity {
                              TextView item_2, TextView item_3){
         Log.d("시발2",cur.getName());
         total.setText(cur.getTotal() + "원");
-        name.setText(cur.getName());
+        name.setText(cur.getName()+" "+cur.getdis()+"m");
         if(cur.getName().startsWith("GS")){
             Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/gs25_logo.jpg")
                     .into(logo);
@@ -194,26 +194,29 @@ public class ResultActivity extends AppCompatActivity {
 
     private void setEachItem2(TextView total, TextView name, ImageView logo, TextView item_1,
                              TextView item_2, TextView item_3){
-        int item1, item2, item3;
+        int sum, item1, item2, item3;
 
         name.setText("Gmarket");
 
         Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/gmarket_logo.png")
                     .into(logo);
-        item1 = item2 = item3 = 0;
+        sum = item1 = item2 = item3 = 0;
         switch(count){
             case 3:
                 item3 = (int) (cur.getProduct().get(2).getPrice()*0.7/10)*10;
+                sum += item3*cur.getProduct().get(2).getPid();
                 item_3.setText(cur.getProduct().get(2).getName()
                         +"/"+cur.getProduct().get(2).getPid()+"EA"
                         +"/"+item3+"원");
             case 2:
                 item2 = (int) (cur.getProduct().get(1).getPrice()*0.64/10)*10;
+                sum += item2*cur.getProduct().get(1).getPid();
                 item_2.setText(cur.getProduct().get(1).getName()
                         +"/"+cur.getProduct().get(1).getPid()+"EA"
                         +"/"+item2+"원");
             case 1:
                 item1 = (int) (cur.getProduct().get(0).getPrice()*0.75/10)*10;
+                sum += item1*cur.getProduct().get(0).getPid();
                 item_1.setText(cur.getProduct().get(0).getName()
                         +"/"+cur.getProduct().get(0).getPid()+"EA"
                         +"/"+item1+"원");
@@ -221,7 +224,7 @@ public class ResultActivity extends AppCompatActivity {
             case 0:
                 break;
         }
-        total.setText(item1+item2+item3 + "원");
+        total.setText(sum + "원");
 
         if(count == 0){
             item_1.setText("");
