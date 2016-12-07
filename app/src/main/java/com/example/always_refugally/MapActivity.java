@@ -37,7 +37,7 @@ public class MapActivity extends FragmentActivity
     public static MapPoint DEFAULT_MARKER_POINT = MapPoint.mapPointWithGeoCoord(0, 0);
     public static MapPoint CurrPoint = MapPoint.mapPointWithGeoCoord(0,0);
     MapView mapView;
-    ImageButton ib;
+    Button ib;
     Intent intent;
     ArrayList<Store> sl;
     @Override
@@ -57,7 +57,7 @@ public class MapActivity extends FragmentActivity
         Button btn2 = (Button) findViewById(button3);
         Button btn3 = (Button) findViewById(button4);
         Button btn4 = (Button) findViewById(button6);
-        ib = (ImageButton) findViewById(R.id.imageButton);
+        ib = (Button) findViewById(R.id.listbutton);
         intent = getIntent();
         sl = (ArrayList)intent.getSerializableExtra("store");
         btn.setOnClickListener(new View.OnClickListener() {

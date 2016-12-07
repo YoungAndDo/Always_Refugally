@@ -105,7 +105,7 @@
             android:layout_height="50dp"
             android:padding="10dp"
             android:layout_marginLeft="10dp"
-            android:id="@+id/button"
+            android:id="@+id/listbutton"
             android:background="@color/colorPrimary"
             android:layout_toRightOf="@+id/search_tap"/>
 
@@ -135,7 +135,7 @@
             android:id="@+id/search"
             android:background="@color/colorPrimary"
             android:layout_below="@+id/search_tap"
-            android:layout_alignStart="@+id/button"/>
+            android:layout_alignStart="@+id/listbutton"/>
     </RelativeLayout>
 
     <RelativeLayout

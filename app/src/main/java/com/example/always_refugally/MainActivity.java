@@ -13,8 +13,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -25,10 +23,8 @@ import com.example.always_refugally.DBDAO.UserDBDAO;
 import com.google.zxing.client.android.integration.IntentIntegrator;
 import com.google.zxing.client.android.integration.IntentResult;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -47,7 +43,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.location)
     TextView location;
 
-    @Bind(R.id.button)
+    @Bind(R.id.listbutton)
     Button btn_add;
 
     @Bind(R.id.search)
