@@ -11,7 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.always_refugally.DB.User;
 import com.example.always_refugally.DBCLASS.Store;
+import com.example.always_refugally.DBDAO.UserDBDAO;
 
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
@@ -200,11 +202,19 @@ public class MapActivity extends FragmentActivity
 
     private void onFinishReverseGeoCoding(String result) {
         TextView localtext = (TextView) findViewById(texttext);
-        Toast.makeText(MapActivity.this, "현재 위치 : " + result, Toast.LENGTH_SHORT).show();
+
         localtext.setText(result);
-        Intent i = new Intent(MapActivity.this, MainActivity.class);
-        i.putExtra("my_address", result);
-        startActivity(i);
+
+        Intent i = getIntent();
+        String user_id;
+        if(i.getExtras().getString("user_id") != null){
+            user_id = i.getExtras().getString("user_id");
+            UserDBDAO userDB = new UserDBDAO(MapActivity.this);
+            User cur_user = userDB.selectById(user_id);
+            cur_user.setAddr(result);
+            userDB.update(cur_user, user_id);
+            Toast.makeText(MapActivity.this, "현재 위치 : " + userDB.selectById(user_id).getAddr(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public int distanceBetween(MapPoint MP) {

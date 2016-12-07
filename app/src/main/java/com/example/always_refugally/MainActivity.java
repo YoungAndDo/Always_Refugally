@@ -167,6 +167,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 i = new Intent(MainActivity.this, MapActivity.class);
+                i.putExtra("user_id", user_id);
                 startActivity(i);
             }
         });
@@ -327,6 +328,15 @@ public class MainActivity extends AppCompatActivity
         });
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        userDB = new UserDBDAO(MainActivity.this);
+        User cur_user = userDB.selectById(user_id);
+        location.setText(cur_user.getAddr());
+    }
+
 
     private void setUserInfo() {
         if(i.getExtras().getString("user_id") != null){
