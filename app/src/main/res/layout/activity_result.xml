@@ -333,4 +333,103 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/layout_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_border"
+        android:layout_below="@+id/layout_3"
+        android:padding="5dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/intro_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/xml_border"
+            android:padding="5dp"
+            android:text="#Online Store"/>
+
+        <TextView
+            android:id="@+id/total_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/intro_4"
+            android:text="예상 총 구매금액:  "
+            android:textSize="13sp"
+            android:layout_toLeftOf="@+id/total_price_4"
+            android:gravity="center|left"/>
+
+        <TextView
+            android:id="@+id/bar_4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_below="@+id/intro_4"/>
+
+        <TextView
+            android:id="@+id/total_price_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20,000원"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center|left"
+            android:layout_marginEnd="5dp"
+            android:layout_alignTop="@+id/intro_4"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_gs25"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/bar_4"
+            android:id="@+id/store_logo_4" />
+
+        <TextView
+            android:id="@+id/store_name_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GS25 율전성대점"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/store_logo_4"/>
+
+        <TextView
+            android:id="@+id/store_4_item_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="babaro/2ea - 1,000W"
+            android:layout_below="@+id/bar_4"
+            android:textSize="15sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/store_4_item_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="babaro/2ea - 1,000W"
+            android:layout_below="@+id/store_4_item_1"
+            android:textSize="15sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/store_4_item_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="babaro/2ea - 1,000W"
+            android:layout_below="@+id/store_4_item_2"
+            android:textSize="15sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+    </RelativeLayout>
+
 </RelativeLayout>
