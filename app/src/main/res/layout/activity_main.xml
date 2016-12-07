@@ -100,7 +100,7 @@
             android:background="@drawable/xml_border" />
 
         <Button
-            android:text="상품추가"
+            android:text="추가"
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:padding="10dp"
