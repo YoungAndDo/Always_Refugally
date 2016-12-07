@@ -106,8 +106,6 @@ public class MapActivity extends FragmentActivity
                     mpmp.setMarkerType(MapPOIItem.MarkerType.BluePin);
                     mpmp.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
                     mpmp.setShowAnimationType(MapPOIItem.ShowAnimationType.SpringFromGround);
-                    if(i==22)
-                        continue;
                     mapView.addPOIItem(mpmp);
                 }
                 String s;
