@@ -76,4 +76,17 @@ public class User implements Parcelable {
         parcel.writeString(getName());
         parcel.writeString(getPw());
     }
+
+    public String db_barcode(String bar)
+    {
+        if(bar.equals("8801062640645"))
+        {
+            return "누드 빼빼로";
+        }
+        else if(bar.equals("8801056038861"))
+        {
+            return "핫식스";
+        }
+        return "";
+    }
 }

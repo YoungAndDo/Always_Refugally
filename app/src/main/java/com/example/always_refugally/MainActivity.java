@@ -244,6 +244,7 @@ public class MainActivity extends AppCompatActivity
                         list1.setVisibility(View.GONE);
                     }
                     count--;
+                    list1_name.setText("");
                 }
             }
         });
@@ -287,6 +288,7 @@ public class MainActivity extends AppCompatActivity
                         list2.setVisibility(View.GONE);
                     }
                     count--;
+                    list2_name.setText("");
                 }
             }
         });
@@ -319,6 +321,7 @@ public class MainActivity extends AppCompatActivity
                     item.remove(list3_name.getText().toString());
                     list3.setVisibility(View.GONE);
                     count--;
+                    list3_name.setText("");
                 }
             }
         });
@@ -362,7 +365,7 @@ public class MainActivity extends AppCompatActivity
     {
         String name = editText.getText().toString();
         String imgURL = returnProductURLByName(name);
-        //editText.setText("");
+        editText.setText("");
         if(imgURL == null){
             Toast.makeText(MainActivity.this, "No Existence on Our Database", Toast.LENGTH_SHORT).show();
             return;
@@ -417,19 +420,16 @@ public class MainActivity extends AppCompatActivity
             String[] result = new String[mResult.size()];
             mResult.toArray(result);
             editText.setText("" + result[0]);
+            putitem();
         }
         else // 바코드 인식 결과
         {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-
+            User bardb = new User();
             String barcode = result.getContents();
             if(barcode == null) return;
-            Toast.makeText(MainActivity.this, barcode, Toast.LENGTH_SHORT).show();
-            if(barcode.equals("10000")) {
-                editText.setText("빼빼로");
-            }else if(barcode.equals("20000")){
-                editText.setText("콜라");
-            }
+            editText.setText(bardb.db_barcode(barcode));
+            putitem();
         }
     }
 

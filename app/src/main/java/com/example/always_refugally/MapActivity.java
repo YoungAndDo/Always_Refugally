@@ -68,7 +68,6 @@ public class MapActivity extends FragmentActivity
 
         Intent intent = getIntent();
         ArrayList<Store> sl = (ArrayList)intent.getSerializableExtra("store");
-
         for (Store s : sl)
         {
             s.setdis(distanceBetweenLoc(s.getLat(),s.getLon()));

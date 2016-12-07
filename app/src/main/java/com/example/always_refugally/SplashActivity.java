@@ -42,7 +42,7 @@ public class SplashActivity extends AppCompatActivity {
         productDB = new ProductDBDAO(SplashActivity.this);
 
         String img_URL = "http://yd1993.dothome.co.kr/test/";
-        String[] prod_list = {"코카콜라", "미에로 화이바", "핫식스", "새우깡", "아몬드 빼빼로"};
+        String[] prod_list = {"코카콜라", "미에로 화이바", "핫식스", "새우깡", "누드 빼빼로"};
 
         for(int i = 0 ; i < 5; i++){
             Product temp = new Product();
