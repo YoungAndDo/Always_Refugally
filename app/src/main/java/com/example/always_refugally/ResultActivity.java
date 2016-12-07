@@ -70,6 +70,7 @@ public class ResultActivity extends AppCompatActivity {
     Store best_store;
     Store cheapest_store;
     Store closest_store;
+    Store online_store;
     Store cur;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,9 +81,10 @@ public class ResultActivity extends AppCompatActivity {
         best_store = new Store();
         cheapest_store = new Store();
         closest_store = new Store();
+        online_store = new Store();
         cur = new Store();
 
-        setThreeStore();
+        setFourStores();
 
         cur = best_store;
         setEachItem(total_1, name_1, logo_1, item_1_1, item_1_2, item_1_3);
@@ -90,55 +92,14 @@ public class ResultActivity extends AppCompatActivity {
         setEachItem(total_2, name_2, logo_2, item_2_1, item_2_2, item_2_3);
         cur = closest_store;
         setEachItem(total_3, name_3, logo_3, item_3_1, item_3_2, item_3_3);
-        cur = closest_store;
-        setEachItem2(total_4, name_4, logo_4, item_4_1, item_4_2, item_4_3);
-
-//        total_1.setText(best_store.getTotal() + "원");
-//        name_1.setText(best_store.getName());
-//        if(best_store.getName().startsWith("GS")){
-//            Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/gs25_logo.jpg")
-//                    .into(logo_1);
-//        }else if (best_store.getName().startsWith("세븐")){
-//            Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/seven_logo.jpg")
-//                    .into(logo_1);
-//        }else if(best_store.getName().startsWith("CU")){
-//            Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/cu_logo.jpg")
-//                    .into(logo_1);
-//        }else if(best_store.getName().startsWith("미니")){
-//            Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/mini_logo.jpg")
-//                    .into(logo_1);
-//        }else if(best_store.getName().startsWith("위드")){
-//            Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/with_logo.jpg")
-//                    .into(logo_1);
-//        }else if(best_store.getName().startsWith("365")){
-//            Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/365_logo.jpg")
-//                    .into(logo_1);
-//        }else if(best_store.getName().startsWith("이마트")){
-//            Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/emart_logo.jpg")
-//                    .into(logo_1);
-//        }
-//        switch(count){
-//            case 3:
-//                item_1_3.setText(best_store.getProduct().get(3).getName()
-//                        +"/"+best_store.getProduct().get(3).getPrice()+"원");
-//            case 2:
-//                item_1_2.setText(best_store.getProduct().get(1).getName()
-//                        +"/"+best_store.getProduct().get(1).getPrice()+"원");
-//            case 1:
-//                item_1_1.setText(best_store.getProduct().get(0).getName()
-//                +"/"+best_store.getProduct().get(0).getPrice()+"원");
-//                break;
-//            case 0:
-//                break;
-//        }
-
-
+        cur = online_store;
+        setEachItem(total_4, name_4, logo_4, item_4_1, item_4_2, item_4_3);
 
     }
 
     private void setEachItem(TextView total, TextView name, ImageView logo, TextView item_1,
                              TextView item_2, TextView item_3){
-        Log.d("시발2",cur.getName());
+
         total.setText(cur.getTotal() + "원");
         name.setText(cur.getName()+" "+cur.getdis()+"m");
         if(cur.getName().startsWith("GS")){
@@ -162,6 +123,10 @@ public class ResultActivity extends AppCompatActivity {
         }else if(cur.getName().startsWith("이마트")){
             Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/emart_logo.jpg")
                     .into(logo);
+        }else if(cur.getName().startsWith("지마켓")){
+            Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/gmarket_logo.png")
+                    .into(logo);
+            name.setText(cur.getName());
         }
         switch(count){
             case 3:
@@ -192,58 +157,8 @@ public class ResultActivity extends AppCompatActivity {
         }
     }
 
-    private void setEachItem2(TextView total, TextView name, ImageView logo, TextView item_1,
-                             TextView item_2, TextView item_3){
-        int sum, item1, item2, item3;
 
-        name.setText("Gmarket");
-
-        Glide.with(ResultActivity.this).load("http://yd1993.dothome.co.kr/test/gmarket_logo.png")
-                    .into(logo);
-        sum = item1 = item2 = item3 = 0;
-        switch(count){
-            case 3:
-                item3 = (int) (cur.getProduct().get(2).getPrice()*0.7/10)*10;
-                sum += item3*cur.getProduct().get(2).getPid();
-                item_3.setText(cur.getProduct().get(2).getName()
-                        +"/"+cur.getProduct().get(2).getPid()+"EA"
-                        +"/"+item3+"원");
-            case 2:
-                item2 = (int) (cur.getProduct().get(1).getPrice()*0.64/10)*10;
-                sum += item2*cur.getProduct().get(1).getPid();
-                item_2.setText(cur.getProduct().get(1).getName()
-                        +"/"+cur.getProduct().get(1).getPid()+"EA"
-                        +"/"+item2+"원");
-            case 1:
-                item1 = (int) (cur.getProduct().get(0).getPrice()*0.75/10)*10;
-                sum += item1*cur.getProduct().get(0).getPid();
-                item_1.setText(cur.getProduct().get(0).getName()
-                        +"/"+cur.getProduct().get(0).getPid()+"EA"
-                        +"/"+item1+"원");
-                break;
-            case 0:
-                break;
-        }
-        total.setText(sum + "원");
-
-        if(count == 0){
-            item_1.setText("");
-            item_2.setText("");
-            item_3.setText("");
-        } else if(count == 1){
-            item_2.setText("");
-            item_3.setText("");
-        }else if(count == 2){
-            item_3.setText("");
-        }
-    }
-
-    private void setThreeStore() {
-//        Store temp = new Store();
-//        temp.setTotal(10000);
-//        temp.setName("365마트 천천");
-//        temp.setdis(1000);
-//        temp.setProduct();
+    private void setFourStores() {
 //
         Intent intent = getIntent();
         ArrayList<Store> sl = (ArrayList)intent.getSerializableExtra("store");
@@ -256,7 +171,6 @@ public class ResultActivity extends AppCompatActivity {
         for(Store s : sl) {
             total_list.add(s.getTotal());
             dist_list.add(s.getdis());
-            Log.d("이름",s.getName());
         }
         int index = 0;
         double min = 10000000;
@@ -269,7 +183,6 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
         best_store = sl.get(index);
-        Log.d("짱짱상점",best_store.getName());
         index = 0;
         for(int i = 0; i < total_list.size(); i++){
             result = total_list.get(i)*0.9 + dist_list.get(i)*0.1;
@@ -280,7 +193,6 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
         cheapest_store = sl.get(index);
-        Log.d("짱짱상점",cheapest_store.getName());
         index = 0;
         for(int i = 0; i < total_list.size(); i++){
             result = total_list.get(i)*0.1 + dist_list.get(i)*0.9;
@@ -291,6 +203,8 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
         closest_store = sl.get(index);
-        Log.d("짱짱상점",closest_store.getName());
+
+
+        online_store = sl.get(index);
     }
 }
