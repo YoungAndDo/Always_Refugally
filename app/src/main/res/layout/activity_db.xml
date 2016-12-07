@@ -9,21 +9,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.java42.rest.com.example.always_refugally.DBActivity">
 
-    <TextView
-        android:id="@+id/info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <Button
-        android:id="@+id/loadUserData"
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
-    <Button
-        android:id="@+id/loadRepositories"
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/loadUserData"
-        android:layout_alignParentStart="true" />
+        android:text="상품 데이터를 검색 중입니다."
+        android:id="@+id/textView"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="20dp" />
 </RelativeLayout>

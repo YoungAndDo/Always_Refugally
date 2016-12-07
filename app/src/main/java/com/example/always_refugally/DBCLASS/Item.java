@@ -1,9 +1,10 @@
 package com.example.always_refugally.DBCLASS;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Item {
+public class Item implements Serializable {
     public Item(String p, int v) {
         this.volume = v;
         this.pid = p;

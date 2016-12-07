@@ -2,16 +2,18 @@ package com.example.always_refugally.DBCLASS;
 
 import com.example.always_refugally.DBCLASS.Product;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Store {
+public class Store implements Serializable{
 
     private String name;
     private int total;
     private double lat;
     private double lon;
+    private double dis;
     private List<Product> product = null;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -20,6 +22,7 @@ public class Store {
      * @return
      * The name
      */
+
     public String getName() {
         return name;
     }
@@ -101,6 +104,17 @@ public class Store {
      * @param product
      * The product
      */
+
+    public double getdis()
+    {
+        return dis;
+    }
+
+    public void setdis(double input)
+    {
+        dis = input;
+    }
+
     public void setProduct(List<Product> product) {
         this.product = product;
     }

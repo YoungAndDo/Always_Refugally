@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -15,6 +16,16 @@ import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapReverseGeoCoder;
 import net.daum.mf.map.api.MapView;
+
+import com.example.always_refugally.DBCLASS.Item;
+import com.example.always_refugally.DBCLASS.Product;
+import com.example.always_refugally.DBCLASS.SearchData;
+import com.example.always_refugally.DBCLASS.Store;
+import com.example.always_refugally.DBCLASS.StoreData;
+import com.example.always_refugally.DBCLASS.UserInterface;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.example.always_refugally.R.id.button2;
 import static com.example.always_refugally.R.id.button3;
@@ -50,14 +61,32 @@ public class MapActivity extends FragmentActivity
     private static final MapPoint DEFAULT_MARKER_POINT22 = MapPoint.mapPointWithGeoCoord(37.2946830,126.9854790);
     private static final MapPoint DEFAULT_MARKER_POINT23 = MapPoint.mapPointWithGeoCoord(37.3028390,126.9726860);
     private static final MapPoint DEFAULT_MARKER_POINT24 = MapPoint.mapPointWithGeoCoord(37.2983670,126.9720650);
+
     public static MapPoint CurrPoint = MapPoint.mapPointWithGeoCoord(0,0);
 
     private MapPOIItem mDefaultMarker;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_map);
+
+        Intent intent = getIntent();
+        ArrayList<Store> sl = (ArrayList)intent.getSerializableExtra("store");
+
+        for (Store s : sl)
+        {
+            Log.d("맵nyan", "onResponse: " + s.getName());
+            Log.d("맵nyan", "onResponse: " + s.getLat());
+            Log.d("맵nyan", "onResponse: " + s.getLon());
+            Log.d("맵nyan", "onResponse: " + s.getTotal());
+            List<Product> pl = s.getProduct();
+            for (Product p : pl)
+            {
+                Log.d("맵nyan", "onResponse: " + p.getName());
+                Log.d("맵nyan", "onResponse: " + p.getPid());
+                Log.d("맵nyan", "onResponse: " + p.getPrice());
+            }
+        }
 
 //다음이 제공하는 MapView객체 생성 및 API Key 설정
         final MapView mapView = new MapView(this);

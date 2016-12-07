@@ -1,6 +1,7 @@
 package com.example.always_refugally;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ import com.example.always_refugally.DBCLASS.StoreData;
 import com.example.always_refugally.DBCLASS.UserInterface;
 import com.example.always_refugally.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,10 +34,9 @@ public class DBActivity extends AppCompatActivity {
     private static final String BASE = "http://39.117.12.76:8000/";
 
     //EditText position;
-    Button getButton;
-    Button searchButton;
     TextView info;
     HashMap<String, Integer> input;
+    ArrayList<Store> sl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,75 +44,57 @@ public class DBActivity extends AppCompatActivity {
         setContentView(R.layout.activity_db);
         Intent intent = getIntent();
         input = (HashMap<String, Integer>) intent.getExtras().get("item");
-        getButton = (Button) findViewById(R.id.loadUserData);
-        searchButton = (Button) findViewById(R.id.loadRepositories);
-        searchButton.setOnClickListener(new View.OnClickListener() {
+
+        /** 네트워킹 시작부분 */
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        UserInterface apiService =
+                retrofit.create(UserInterface.class);
+        List<Item> item_list = new ArrayList<Item>();
+        for(String s : input.keySet())
+        {
+            item_list.add(new Item(s, input.get(s)));
+        }
+        SearchData sd = new SearchData();
+        sd.setItem(item_list);
+        Call<StoreData> call = apiService.search(sd);
+        call.enqueue(new Callback<StoreData>() {
             @Override
-            public void onClick(View v) {
-                Log.d("nyan", "Nyan");
-//                SendData send = new SendData();
-//                try {
-//                    send.run(input);
-//                    Log.d("nyan", "Success");
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-                Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl(BASE)
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build();
-                UserInterface apiService =
-                        retrofit.create(UserInterface.class);
-//                Item i1 = new Item();
-//                Item i2 = new Item();
-//                Item i3 = new Item();
-//                Item i4 = new Item();
-//                i1.setPid("코카콜라");
-//                i2.setPid("누드 빼빼로");
-//                i3.setPid("핫식스");
-//                i4.setPid("새우깡");
-//                i1.setVolume(3);
-//                i2.setVolume(1);
-//                i3.setVolume(4);
-//                i4.setVolume(6);
-                List<Item> item_list = new ArrayList<Item>();
-                for(String s : input.keySet())
+            public void onResponse(Call<StoreData> call, Response<StoreData> response) {
+                int statusCode = response.code();
+                StoreData ret = response.body();
+                sl = (ArrayList)ret.getStore();
+                for (Store s : sl)
                 {
-                    item_list.add(new Item(s, input.get(s)));
+                    Log.d("nyan", "onResponse: " + s.getName());
+                    Log.d("nyan", "onResponse: " + s.getLat());
+                    Log.d("nyan", "onResponse: " + s.getLon());
+                    Log.d("nyan", "onResponse: " + s.getTotal());
+                    List<Product> pl = s.getProduct();
+                    for (Product p : pl)
+                    {
+                        Log.d("nyan", "onResponse: " + p.getName());
+                        Log.d("nyan", "onResponse: " + p.getPid());
+                        Log.d("nyan", "onResponse: " + p.getPrice());
+                    }
                 }
-//                item_list.add(i1);
-//                item_list.add(i2);
-//                item_list.add(i3);
-//                item_list.add(i4);
-                SearchData sd = new SearchData();
-                sd.setItem(item_list);
-                Call<StoreData> call = apiService.search(sd);
-                call.enqueue(new Callback<StoreData>() {
+
+                new Handler().postDelayed(new Runnable() {
                     @Override
-                    public void onResponse(Call<StoreData> call, Response<StoreData> response) {
-                        int statusCode = response.code();
-                        StoreData ret = response.body();
-                        List<Store> sl = ret.getStore();
-                        for (Store s : sl)
-                        {
-                            Log.d("nyan", "onResponse: " + s.getName());
-                            //Log.d("nyan", "onResponse: " + s.getLat());
-                            //Log.d("nyan", "onResponse: " + s.getLon());
-                            Log.d("nyan", "onResponse: " + s.getTotal());
-                            List<Product> pl = s.getProduct();
-                            for (Product p : pl)
-                            {
-                                Log.d("nyan", "onResponse: " + p.getName());
-                                Log.d("nyan", "onResponse: " + p.getPid());
-                                Log.d("nyan", "onResponse: " + p.getPrice());
-                            }
-                        }
+                    public void run() {
+                        Intent i;
+                        i = new Intent(DBActivity.this, MapActivity.class);
+                        i.putExtra("store", sl);
+                        startActivity(i);
                     }
-                    @Override
-                    public void onFailure(Call<StoreData> call, Throwable t) {
-                        Log.d("nyan", "onFailure: " + t.toString());
-                    }
-                });
+                }, 1500);
+            }
+            @Override
+            public void onFailure(Call<StoreData> call, Throwable t) {
+                Log.d("nyan", "onFailure: " + t.toString());
             }
         });
     }
